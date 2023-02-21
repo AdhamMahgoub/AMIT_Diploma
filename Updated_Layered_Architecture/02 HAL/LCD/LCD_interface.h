@@ -1,8 +1,8 @@
-#ifndef			LCD_INTERFACE_H
+#ifndef			LCD_INTERFACE_H 
 #define 		LCD_INTERFACE_H
 
-#define 		LCD_DATA_PORT			PORTA 		//the whole 8 bits 
-#define			LCD_CONTROL_PORT		PORTB		//only 3 bits 
+#define 		LCD_DATA_PORT			PORTC		//the whole 8 bits 
+#define			LCD_CONTROL_PORT		PORTD		//only 3 bits 
 
 #define			LCD_RS					PIN0
 #define			LCD_RW					PIN1
@@ -24,6 +24,8 @@ void LCD_voidWriteData(u8 Data);
 /*the following are functions done by me*/
 void LCD_cursor_shift_right (void);
 void LCD_set_xy(u8 x, u8 y);
+void LCD_print_string(const char *str); //copied from github + modified by me 
+void LCD_write_num(u32 num);			//copied from github + modified by me 
 
 #endif
 

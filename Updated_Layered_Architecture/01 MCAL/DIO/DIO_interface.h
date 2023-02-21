@@ -38,6 +38,4 @@ void DIO_voidSetPortValue(u8 PORTID, u8 Value);
 void DIO_voidSetPortDirection(u8 PORTID, u8 Direction);
 
 
- 
-
 #endif

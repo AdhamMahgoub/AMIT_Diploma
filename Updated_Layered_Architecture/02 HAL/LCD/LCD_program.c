@@ -5,6 +5,7 @@
 #include "LCD_interface.h"
 
 #include <util/delay.h>
+#define F_CPU 16000000UL  // 16 MHz
 
 
 //need to include delay -- will be added in the main.c file 
@@ -89,4 +90,41 @@ void LCD_set_xy (u8 row, u8 column)
 	
 }
 
+void LCD_print_string(const char *str)		//copied from github + modified by me 
+{
+	/*	Without using "const", str was stored in flash memory (with the code)	*/
+	/*	when i used const, it moved from flash memory to the RAM				*/
+	
+	unsigned char i = 0;
+	
+	while(str[i] != 0)
+	{
+		LCD_voidWriteData(str[i]);
+		i++;
+	}
+}
 
+void LCD_write_num(u32 num)			//copied from github + modified by me
+{			
+	u32 txt[10] = {0};
+	s16 i = 0;
+	if(num == 0) 
+	{
+		LCD_voidWriteData('0');
+		return; //end the function
+	}
+	
+	for (i = 0; num != 0; i++ )
+	{
+		txt[i] = num%10 + 48;
+		num = num  / 10 ;
+	}
+	i--;
+	
+	while(i >= 0)
+	{
+		LCD_voidWriteData(txt[i]);
+		i--;
+	}
+	
+}

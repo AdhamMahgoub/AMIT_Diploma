@@ -3,9 +3,7 @@
 
 #define 		KBD_PORT 	PORTD
 
-
 u8 KBD_u8GetPressedKey(void); 
-
 
 #endif
 
