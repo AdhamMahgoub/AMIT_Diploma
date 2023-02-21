@@ -1,0 +1,241 @@
+
+UART_Project.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000006c  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  00000160  2**0
+                  ALLOC, LOAD, DATA
+  2 .comment      0000002f  00000000  00000000  00000160  2**0
+                  CONTENTS, READONLY
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  0000018f  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000050  00000000  00000000  0000019d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000a66  00000000  00000000  000001ed  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000005a5  00000000  00000000  00000c53  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000260  00000000  00000000  000011f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000068  00000000  00000000  00001458  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000001bf  00000000  00000000  000014c0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000013  00000000  00000000  0000167f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000030  00000000  00000000  00001692  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .text         00000004  000000de  000000de  00000152  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000016c4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .text.main    0000000e  000000c0  000000c0  00000134  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.UART_Init 0000003e  0000006c  0000006c  000000e0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.UART_SendByte 00000008  000000ce  000000ce  00000142  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.UART_RecieveByte 00000008  000000d6  000000d6  0000014a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.__dummy_fini 00000002  000000e6  000000e6  0000015a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.__dummy_funcs_on_exit 00000002  000000e8  000000e8  0000015c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.__dummy_simulator_exit 00000002  000000ea  000000ea  0000015e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.exit    00000016  000000aa  000000aa  0000011e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text._Exit   00000004  000000e2  000000e2  00000156  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+   8:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+   c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  10:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  14:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  18:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  1c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  20:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  24:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  28:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  2c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  30:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  34:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  38:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  3c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  40:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  44:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  48:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  4c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  50:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+  60:	0e 94 60 00 	call	0xc0	; 0xc0 <main>
+  64:	0c 94 55 00 	jmp	0xaa	; 0xaa <exit>
+
+00000068 <_exit>:
+  68:	f8 94       	cli
+
+0000006a <__stop_program>:
+  6a:	ff cf       	rjmp	.-2      	; 0x6a <__stop_program>
+
+Disassembly of section .text:
+
+000000de <__bad_interrupt>:
+  de:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.main:
+
+000000c0 <main>:
+
+int main(void)
+{
+		u8 Byte;
+	
+		UART_Init();						//	UART Init
+  c0:	0e 94 36 00 	call	0x6c	; 0x6c <__data_load_end>
+
+	
+
+    while(1)
+    {
+        Byte = UART_RecieveByte();
+  c4:	0e 94 6b 00 	call	0xd6	; 0xd6 <UART_RecieveByte>
+        UART_SendByte(Byte);	
+  c8:	0e 94 67 00 	call	0xce	; 0xce <UART_SendByte>
+  cc:	fb cf       	rjmp	.-10     	; 0xc4 <main+0x4>
+
+Disassembly of section .text.UART_Init:
+
+0000006c <UART_Init>:
+#include "UART_config.h"
+
+void UART_Init (void)
+{
+		//Enable RX and TX 
+		SET_BIT(UCSRB,RXEN_bit);
+  6c:	8a b1       	in	r24, 0x0a	; 10
+  6e:	88 60       	ori	r24, 0x08	; 8
+  70:	8a b9       	out	0x0a, r24	; 10
+		SET_BIT(UCSRB,TXEN_bit);
+  72:	8a b1       	in	r24, 0x0a	; 10
+  74:	80 61       	ori	r24, 0x10	; 16
+  76:	8a b9       	out	0x0a, r24	; 10
+	
+		SET_BIT(UCSRC, URSEL_bit);				//	Register Select UCSRC or UBRHH
+  78:	80 b5       	in	r24, 0x20	; 32
+  7a:	80 68       	ori	r24, 0x80	; 128
+  7c:	80 bd       	out	0x20, r24	; 32
+	
+		//Setting the Frame Format: 8 bits, no parity, one stop bits. 
+		SET_BIT(UCSRC, UCSZ0_bit);				//	8 bits character
+  7e:	80 b5       	in	r24, 0x20	; 32
+  80:	82 60       	ori	r24, 0x02	; 2
+  82:	80 bd       	out	0x20, r24	; 32
+		SET_BIT(UCSRC, UCSZ1_bit);				//	8 bits character
+  84:	80 b5       	in	r24, 0x20	; 32
+  86:	84 60       	ori	r24, 0x04	; 4
+  88:	80 bd       	out	0x20, r24	; 32
+				
+		CLR_BIT(UCSRC, UPM0_bit);				//	No parity
+  8a:	80 b5       	in	r24, 0x20	; 32
+  8c:	8f 7e       	andi	r24, 0xEF	; 239
+  8e:	80 bd       	out	0x20, r24	; 32
+		CLR_BIT(UCSRC, UPM1_bit);				//	No parity
+  90:	80 b5       	in	r24, 0x20	; 32
+  92:	8f 7d       	andi	r24, 0xDF	; 223
+  94:	80 bd       	out	0x20, r24	; 32
+		
+		CLR_BIT(UCSRC, USBS_bit);				//	One stop bit
+  96:	80 b5       	in	r24, 0x20	; 32
+  98:	87 7f       	andi	r24, 0xF7	; 247
+  9a:	80 bd       	out	0x20, r24	; 32
+
+		CLR_BIT(UCSRC, UMSEL_bit);				//	Asynchronous
+  9c:	80 b5       	in	r24, 0x20	; 32
+  9e:	8f 7b       	andi	r24, 0xBF	; 191
+  a0:	80 bd       	out	0x20, r24	; 32
+		
+		//Setting the baud rate to 9600
+		UBRRH = 0; 
+  a2:	10 bc       	out	0x20, r1	; 32
+		UBRRL = 103;							//	Filling the low byte (8 bits only) -- this means 9600 (from table)
+  a4:	87 e6       	ldi	r24, 0x67	; 103
+  a6:	89 b9       	out	0x09, r24	; 9
+  a8:	08 95       	ret
+
+Disassembly of section .text.UART_SendByte:
+
+000000ce <UART_SendByte>:
+}
+
+void UART_SendByte (u8 Byte)
+{
+		/* Wait for empty transmit buffer */
+		while ( (GET_BIT(UCSRA, UDRE_bit)) == 0 );
+  ce:	5d 9b       	sbis	0x0b, 5	; 11
+  d0:	fe cf       	rjmp	.-4      	; 0xce <UART_SendByte>
+		
+		/* Put data into buffer, sends the data */
+		UDR = Byte;								//	Data is put into the UDR (Read)
+  d2:	8c b9       	out	0x0c, r24	; 12
+  d4:	08 95       	ret
+
+Disassembly of section .text.UART_RecieveByte:
+
+000000d6 <UART_RecieveByte>:
+}
+
+u8 UART_RecieveByte (void)
+{
+		//Wait until the receive is complete  
+		while (	GET_BIT(UCSRA,RXC_bit) == 0);	/* Wait till data is received (to the UDR)	*/
+  d6:	5f 9b       	sbis	0x0b, 7	; 11
+  d8:	fe cf       	rjmp	.-4      	; 0xd6 <UART_RecieveByte>
+		//Return the received data 
+		return(UDR);							/* Return the byte (3ashan el Data fel UDR)  */
+  da:	8c b1       	in	r24, 0x0c	; 12
+  dc:	08 95       	ret
+
+Disassembly of section .text.__dummy_fini:
+
+000000e6 <_fini>:
+  e6:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+000000e8 <__funcs_on_exit>:
+  e8:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+000000ea <__simulator_exit>:
+  ea:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+000000aa <exit>:
+  aa:	ec 01       	movw	r28, r24
+  ac:	0e 94 74 00 	call	0xe8	; 0xe8 <__funcs_on_exit>
+  b0:	0e 94 73 00 	call	0xe6	; 0xe6 <_fini>
+  b4:	ce 01       	movw	r24, r28
+  b6:	0e 94 75 00 	call	0xea	; 0xea <__simulator_exit>
+  ba:	ce 01       	movw	r24, r28
+  bc:	0e 94 71 00 	call	0xe2	; 0xe2 <_Exit>
+
+Disassembly of section .text._Exit:
+
+000000e2 <_Exit>:
+  e2:	0e 94 34 00 	call	0x68	; 0x68 <_exit>
