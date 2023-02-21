@@ -5,61 +5,61 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .text         000000ae  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00800060  0000041c  2**0
+  1 .data         00000000  00800060  00800060  000003fe  2**0
                   ALLOC, LOAD, DATA
-  2 .comment      0000002f  00000000  00000000  0000041c  2**0
+  2 .comment      0000002f  00000000  00000000  000003fe  2**0
                   CONTENTS, READONLY
-  3 .stack.descriptors.hdr 0000000e  00000000  00000000  0000044b  2**0
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  0000042d  2**0
                   CONTENTS, READONLY
-  4 .debug_aranges 000000b8  00000000  00000000  00000459  2**0
+  4 .debug_aranges 000000b8  00000000  00000000  0000043b  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   000010b7  00000000  00000000  00000511  2**0
+  5 .debug_info   00000fd0  00000000  00000000  000004f3  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000711  00000000  00000000  000015c8  2**0
+  6 .debug_abbrev 000006a7  00000000  00000000  000014c3  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00000515  00000000  00000000  00001cd9  2**0
+  7 .debug_line   00000485  00000000  00000000  00001b6a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000164  00000000  00000000  000021f0  2**2
+  8 .debug_frame  00000164  00000000  00000000  00001ff0  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000226  00000000  00000000  00002354  2**0
+  9 .debug_str    00000226  00000000  00000000  00002154  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    000003ea  00000000  00000000  0000257a  2**0
+ 10 .debug_loc    000003a2  00000000  00000000  0000237a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000088  00000000  00000000  00002964  2**0
+ 11 .debug_ranges 00000088  00000000  00000000  0000271c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .text         00000004  0000037a  0000037a  0000040e  2**1
+ 12 .text         00000004  0000035c  0000035c  000003f0  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000029ec  2**2
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000027a4  2**2
                   CONTENTS, READONLY, DEBUGGING
  14 .text.DIO_voidSetPinDirection 000000ec  000000ae  000000ae  00000142  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
  15 .text.DIO_voidSetPinValue 000000ec  0000019a  0000019a  0000022e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 16 .text.EXTI0_SetCallBack 0000000a  00000360  00000360  000003f4  2**1
+ 16 .text.EXTI0_SetCallBack 0000000a  00000338  00000338  000003cc  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 17 .text.GIE_voidInterruptEnable 00000008  0000036a  0000036a  000003fe  2**1
+ 17 .text.GIE_voidInterruptEnable 00000008  0000034c  0000034c  000003e0  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 18 .text.EXTI0_voidInit 0000001a  00000330  00000330  000003c4  2**1
+ 18 .text.EXTI0_voidInit 0000001a  00000308  00000308  0000039c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 19 .text.EXTI0_voidEnableInterrupt 00000008  00000372  00000372  00000406  2**1
+ 19 .text.EXTI0_voidEnableInterrupt 00000008  00000354  00000354  000003e8  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
  20 .text.__vector_1 0000004e  00000286  00000286  0000031a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 21 .bss.EXTI0_CallBack 00000002  00800060  00800060  0000041c  2**0
+ 21 .bss.EXTI0_CallBack 00000002  00800060  00800060  000003fe  2**0
                   ALLOC
- 22 .text.EXTI0_fun 00000028  00000308  00000308  0000039c  2**1
+ 22 .text.EXTI0_fun 0000000a  00000342  00000342  000003d6  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
  23 .text.main    00000034  000002d4  000002d4  00000368  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 24 .text.__dummy_fini 00000002  00000382  00000382  00000416  2**1
+ 24 .text.__dummy_fini 00000002  00000364  00000364  000003f8  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 25 .text.__dummy_funcs_on_exit 00000002  00000384  00000384  00000418  2**1
+ 25 .text.__dummy_funcs_on_exit 00000002  00000366  00000366  000003fa  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 26 .text.__dummy_simulator_exit 00000002  00000386  00000386  0000041a  2**1
+ 26 .text.__dummy_simulator_exit 00000002  00000368  00000368  000003fc  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 27 .text.exit    00000016  0000034a  0000034a  000003de  2**1
+ 27 .text.exit    00000016  00000322  00000322  000003b6  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 28 .text._Exit   00000004  0000037e  0000037e  00000412  2**1
+ 28 .text._Exit   00000004  00000360  00000360  000003f4  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
 
 Disassembly of section .text:
@@ -67,25 +67,25 @@ Disassembly of section .text:
 00000000 <__vectors>:
    0:	0c 94 2d 00 	jmp	0x5a	; 0x5a <__ctors_end>
    4:	0c 94 43 01 	jmp	0x286	; 0x286 <__vector_1>
-   8:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-   c:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  10:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  14:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  18:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  1c:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  20:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  24:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  28:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  2c:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  30:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  34:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  38:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  3c:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  40:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  44:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  48:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  4c:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
-  50:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__bad_interrupt>
+   8:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+   c:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  10:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  14:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  18:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  1c:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  20:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  24:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  28:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  2c:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  30:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  34:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  38:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  3c:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  40:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  44:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  48:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  4c:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
+  50:	0c 94 ae 01 	jmp	0x35c	; 0x35c <__bad_interrupt>
 
 00000054 <.dinit>:
   54:	00 60       	ori	r16, 0x00	; 0
@@ -134,7 +134,7 @@ Disassembly of section .text:
   9e:	f4 07       	cpc	r31, r20
   a0:	31 f7       	brne	.-52     	; 0x6e <__do_copy_data+0x8>
   a2:	0e 94 6a 01 	call	0x2d4	; 0x2d4 <main>
-  a6:	0c 94 a5 01 	jmp	0x34a	; 0x34a <exit>
+  a6:	0c 94 91 01 	jmp	0x322	; 0x322 <exit>
 
 000000aa <_exit>:
   aa:	f8 94       	cli
@@ -144,8 +144,8 @@ Disassembly of section .text:
 
 Disassembly of section .text:
 
-0000037a <__bad_interrupt>:
- 37a:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+0000035c <__bad_interrupt>:
+ 35c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 Disassembly of section .text.DIO_voidSetPinDirection:
 
@@ -449,73 +449,73 @@ void DIO_voidSetPinValue (u8 PORTID, u8 PINID, u8 Value)
 
 Disassembly of section .text.EXTI0_SetCallBack:
 
-00000360 <EXTI0_SetCallBack>:
+00000338 <EXTI0_SetCallBack>:
 {
 	/*		function to communicate between 2 .c files 				*/
 	/*		takes address of function from the main.c w tgebha hena	*/
 	/*		hayeb2a gowaha el address bta3 el EXTI0_fun 			*/
 	
 	EXTI0_CallBack = pf; 
- 360:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <_edata+0x1>
- 364:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <_edata>
- 368:	08 95       	ret
+ 338:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <_edata+0x1>
+ 33c:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <_edata>
+ 340:	08 95       	ret
 
 Disassembly of section .text.GIE_voidInterruptEnable:
 
-0000036a <GIE_voidInterruptEnable>:
+0000034c <GIE_voidInterruptEnable>:
 }
 void GIE_voidInterruptEnable(void)
 {
 	SET_BIT(SREG,7);
- 36a:	8f b7       	in	r24, 0x3f	; 63
- 36c:	80 68       	ori	r24, 0x80	; 128
- 36e:	8f bf       	out	0x3f, r24	; 63
- 370:	08 95       	ret
+ 34c:	8f b7       	in	r24, 0x3f	; 63
+ 34e:	80 68       	ori	r24, 0x80	; 128
+ 350:	8f bf       	out	0x3f, r24	; 63
+ 352:	08 95       	ret
 
 Disassembly of section .text.EXTI0_voidInit:
 
-00000330 <EXTI0_voidInit>:
+00000308 <EXTI0_voidInit>:
 }
 void EXTI0_voidInit(void)
 {
 	/*		EXTI0 => Falling or Rising or both or Low Level		*/
 	#if 	SENSE_MODE == EXTI_FALLING
 			CLR_BIT(MCUCR,0);
- 330:	85 b7       	in	r24, 0x35	; 53
- 332:	8e 7f       	andi	r24, 0xFE	; 254
- 334:	85 bf       	out	0x35, r24	; 53
+ 308:	85 b7       	in	r24, 0x35	; 53
+ 30a:	8e 7f       	andi	r24, 0xFE	; 254
+ 30c:	85 bf       	out	0x35, r24	; 53
 			SET_BIT(MCUCR,1);
- 336:	85 b7       	in	r24, 0x35	; 53
- 338:	82 60       	ori	r24, 0x02	; 2
- 33a:	85 bf       	out	0x35, r24	; 53
+ 30e:	85 b7       	in	r24, 0x35	; 53
+ 310:	82 60       	ori	r24, 0x02	; 2
+ 312:	85 bf       	out	0x35, r24	; 53
 	#else 
 			#error	"Wrong choice of Sense Mode!"
 	#endif 
 	
 	/*	Disable all interrupts	*/
 	CLR_BIT(GICR,6);
- 33c:	8b b7       	in	r24, 0x3b	; 59
- 33e:	8f 7b       	andi	r24, 0xBF	; 191
- 340:	8b bf       	out	0x3b, r24	; 59
+ 314:	8b b7       	in	r24, 0x3b	; 59
+ 316:	8f 7b       	andi	r24, 0xBF	; 191
+ 318:	8b bf       	out	0x3b, r24	; 59
 	/*	Clear all Flags			*/
 	SET_BIT(GIFR,6);
- 342:	8a b7       	in	r24, 0x3a	; 58
- 344:	80 64       	ori	r24, 0x40	; 64
- 346:	8a bf       	out	0x3a, r24	; 58
- 348:	08 95       	ret
+ 31a:	8a b7       	in	r24, 0x3a	; 58
+ 31c:	80 64       	ori	r24, 0x40	; 64
+ 31e:	8a bf       	out	0x3a, r24	; 58
+ 320:	08 95       	ret
 
 Disassembly of section .text.EXTI0_voidEnableInterrupt:
 
-00000372 <EXTI0_voidEnableInterrupt>:
+00000354 <EXTI0_voidEnableInterrupt>:
 	
 }
 void EXTI0_voidEnableInterrupt(void)
 {
 	SET_BIT(GICR,6);
- 372:	8b b7       	in	r24, 0x3b	; 59
- 374:	80 64       	ori	r24, 0x40	; 64
- 376:	8b bf       	out	0x3b, r24	; 59
- 378:	08 95       	ret
+ 354:	8b b7       	in	r24, 0x3b	; 59
+ 356:	80 64       	ori	r24, 0x40	; 64
+ 358:	8b bf       	out	0x3b, r24	; 59
+ 35a:	08 95       	ret
 
 Disassembly of section .text.__vector_1:
 
@@ -566,39 +566,18 @@ void GIE_voidInterruptDisable(void)
 
 Disassembly of section .text.EXTI0_fun:
 
-00000308 <EXTI0_fun>:
-#include <util/delay.h>
+00000342 <EXTI0_fun>:
 
+		  
 
 void EXTI0_fun	(void)
 {
-	DIO_voidSetPinValue(PORTC, PIN2, HIGH);
- 308:	41 e0       	ldi	r20, 0x01	; 1
- 30a:	62 e0       	ldi	r22, 0x02	; 2
- 30c:	82 e0       	ldi	r24, 0x02	; 2
- 30e:	0e 94 cd 00 	call	0x19a	; 0x19a <DIO_voidSetPinValue>
-	#else
-		//round up by default
-		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
-	#endif
-
-	__builtin_avr_delay_cycles(__ticks_dc);
- 312:	2f e3       	ldi	r18, 0x3F	; 63
- 314:	8d e0       	ldi	r24, 0x0D	; 13
- 316:	93 e0       	ldi	r25, 0x03	; 3
- 318:	21 50       	subi	r18, 0x01	; 1
- 31a:	80 40       	sbci	r24, 0x00	; 0
- 31c:	90 40       	sbci	r25, 0x00	; 0
- 31e:	e1 f7       	brne	.-8      	; 0x318 <EXTI0_fun+0x10>
- 320:	00 c0       	rjmp	.+0      	; 0x322 <EXTI0_fun+0x1a>
- 322:	00 00       	nop
-	_delay_ms(1000);
-	DIO_voidSetPinValue(PORTC, PIN2, LOW);
- 324:	40 e0       	ldi	r20, 0x00	; 0
- 326:	62 e0       	ldi	r22, 0x02	; 2
- 328:	82 e0       	ldi	r24, 0x02	; 2
- 32a:	0e 94 cd 00 	call	0x19a	; 0x19a <DIO_voidSetPinValue>
- 32e:	08 95       	ret
+	TOG_BIT(PORTA_REG, 0);
+ 342:	9b b3       	in	r25, 0x1b	; 27
+ 344:	81 e0       	ldi	r24, 0x01	; 1
+ 346:	89 27       	eor	r24, r25
+ 348:	8b bb       	out	0x1b, r24	; 27
+ 34a:	08 95       	ret
 
 Disassembly of section .text.main:
 
@@ -621,57 +600,57 @@ int main(void)
 	
 	/*	Call Back	*/
 	EXTI0_SetCallBack(EXTI0_fun);
- 2e8:	84 e8       	ldi	r24, 0x84	; 132
+ 2e8:	81 ea       	ldi	r24, 0xA1	; 161
  2ea:	91 e0       	ldi	r25, 0x01	; 1
- 2ec:	0e 94 b0 01 	call	0x360	; 0x360 <EXTI0_SetCallBack>
+ 2ec:	0e 94 9c 01 	call	0x338	; 0x338 <EXTI0_SetCallBack>
 	
 	/*	EXTI0 Init							*/
 	EXTI0_voidInit();	
- 2f0:	0e 94 98 01 	call	0x330	; 0x330 <EXTI0_voidInit>
+ 2f0:	0e 94 84 01 	call	0x308	; 0x308 <EXTI0_voidInit>
 	/*	Enable EXTI0						*/
 	EXTI0_voidEnableInterrupt(); 	
- 2f4:	0e 94 b9 01 	call	0x372	; 0x372 <EXTI0_voidEnableInterrupt>
+ 2f4:	0e 94 aa 01 	call	0x354	; 0x354 <EXTI0_voidEnableInterrupt>
 	/*	GIE Enable							*/
 	GIE_voidInterruptEnable(); 	
- 2f8:	0e 94 b5 01 	call	0x36a	; 0x36a <GIE_voidInterruptEnable>
+ 2f8:	0e 94 a6 01 	call	0x34c	; 0x34c <GIE_voidInterruptEnable>
 		
 	
 	
 	/*	SET LED Pin Direction				*/
-	DIO_voidSetPinDirection(PORTC, PIN2, OUTPUT);
+	DIO_voidSetPinDirection(PORTA, PIN0, OUTPUT);
  2fc:	41 e0       	ldi	r20, 0x01	; 1
- 2fe:	62 e0       	ldi	r22, 0x02	; 2
- 300:	82 e0       	ldi	r24, 0x02	; 2
+ 2fe:	60 e0       	ldi	r22, 0x00	; 0
+ 300:	80 e0       	ldi	r24, 0x00	; 0
  302:	0e 94 57 00 	call	0xae	; 0xae <_etext>
  306:	ff cf       	rjmp	.-2      	; 0x306 <main+0x32>
 
 Disassembly of section .text.__dummy_fini:
 
-00000382 <_fini>:
- 382:	08 95       	ret
+00000364 <_fini>:
+ 364:	08 95       	ret
 
 Disassembly of section .text.__dummy_funcs_on_exit:
 
-00000384 <__funcs_on_exit>:
- 384:	08 95       	ret
+00000366 <__funcs_on_exit>:
+ 366:	08 95       	ret
 
 Disassembly of section .text.__dummy_simulator_exit:
 
-00000386 <__simulator_exit>:
- 386:	08 95       	ret
+00000368 <__simulator_exit>:
+ 368:	08 95       	ret
 
 Disassembly of section .text.exit:
 
-0000034a <exit>:
- 34a:	ec 01       	movw	r28, r24
- 34c:	0e 94 c2 01 	call	0x384	; 0x384 <__funcs_on_exit>
- 350:	0e 94 c1 01 	call	0x382	; 0x382 <_fini>
- 354:	ce 01       	movw	r24, r28
- 356:	0e 94 c3 01 	call	0x386	; 0x386 <__simulator_exit>
- 35a:	ce 01       	movw	r24, r28
- 35c:	0e 94 bf 01 	call	0x37e	; 0x37e <_Exit>
+00000322 <exit>:
+ 322:	ec 01       	movw	r28, r24
+ 324:	0e 94 b3 01 	call	0x366	; 0x366 <__funcs_on_exit>
+ 328:	0e 94 b2 01 	call	0x364	; 0x364 <_fini>
+ 32c:	ce 01       	movw	r24, r28
+ 32e:	0e 94 b4 01 	call	0x368	; 0x368 <__simulator_exit>
+ 332:	ce 01       	movw	r24, r28
+ 334:	0e 94 b0 01 	call	0x360	; 0x360 <_Exit>
 
 Disassembly of section .text._Exit:
 
-0000037e <_Exit>:
- 37e:	0e 94 55 00 	call	0xaa	; 0xaa <_exit>
+00000360 <_Exit>:
+ 360:	0e 94 55 00 	call	0xaa	; 0xaa <_exit>

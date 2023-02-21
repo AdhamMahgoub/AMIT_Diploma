@@ -5,24 +5,21 @@
 
 #include "DIO_interface.h"
 #include "EXTI_interface.h"
-#include <util/delay.h>
+#include "DIO_private.h"
 
+		  
 
 void EXTI0_fun	(void)
 {
-	/*		What Happens when Interrupt Occur 		*/
-	
-	DIO_voidSetPinValue(PORTC, PIN2, HIGH);
-	_delay_ms(1000);
-	DIO_voidSetPinValue(PORTC, PIN2, LOW);
+	TOG_BIT(PORTA_REG, 0);
 }
 
 
 int main(void)
 {
 		
-	/* 	Initialization part											*/
-	/*	D2 (external interrupt) is Input and Pull-Up Pin			*/
+	/* 	Initialization part					*/
+	/*	D2 is Input and Pull-Up Pin			*/
 	DIO_voidSetPinDirection(PORTD, PIN2, INPUT);
 	DIO_voidSetPinValue(PORTD, PIN2, HIGH);
 	
@@ -37,8 +34,9 @@ int main(void)
 	GIE_voidInterruptEnable(); 	
 		
 	
+	
 	/*	SET LED Pin Direction				*/
-	DIO_voidSetPinDirection(PORTC, PIN2, OUTPUT);
+	DIO_voidSetPinDirection(PORTA, PIN0, OUTPUT);
 	
 	
     while(1)
