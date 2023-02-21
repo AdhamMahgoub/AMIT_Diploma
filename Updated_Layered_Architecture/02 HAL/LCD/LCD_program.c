@@ -5,8 +5,6 @@
 #include "LCD_interface.h"
 
 #include <util/delay.h>
-#define F_CPU 16000000UL  // 16 MHz
-
 
 //need to include delay -- will be added in the main.c file 
 //note that i didn't need to include the DIO_private.h -- because i didn't need it 
@@ -14,9 +12,12 @@
 void LCD_voidInit(void)
 { 
 	DIO_voidSetPortDirection(LCD_DATA_PORT, 0xFF); 		//all pins are OUTPUT (DATA_PORT)
-	DIO_voidSetPortDirection(LCD_CONTROL_PORT, 0xFF); 	//all pins are OUTPUT (CONTROL_PORT)
+	//DIO_voidSetPortDirection(LCD_CONTROL_PORT, 0xFF); 	//all pins are OUTPUT (CONTROL_PORT)
+	DIO_voidSetPinDirection(LCD_CONTROL_PORT, PIN0, OUTPUT);
+	DIO_voidSetPinDirection(LCD_CONTROL_PORT, PIN1, OUTPUT);
+	DIO_voidSetPinDirection(LCD_CONTROL_PORT, PIN2, OUTPUT);
 	
-	_delay_ms(40); 				/*	LCD Power ON delay always > 15ms	*/
+	_delay_ms(45); 				/*	LCD Power ON delay always > 15ms	*/
 	
 	
 												
@@ -43,9 +44,9 @@ void LCD_voidSendCMD(u8 CMD)
 	DIO_voidSetPinValue(LCD_CONTROL_PORT, LCD_EN, HIGH);
 	/*		4- SEND CMD		*/
 	DIO_voidSetPortValue(LCD_DATA_PORT, CMD);
-	_delay_ms(5);
+	_delay_ms(20);
 	DIO_voidSetPinValue(LCD_CONTROL_PORT, LCD_EN, LOW);
-	_delay_ms(5);										
+	_delay_ms(20);										
 }
 
 void LCD_voidWriteData(u8 Data)
@@ -64,9 +65,9 @@ void LCD_voidWriteData(u8 Data)
 	DIO_voidSetPinValue(LCD_CONTROL_PORT, LCD_EN, HIGH);
 	/*		4- SEND CMD		*/
 	DIO_voidSetPortValue(LCD_DATA_PORT, Data);
-	_delay_ms(5);
+	_delay_ms(50);
 	DIO_voidSetPinValue(LCD_CONTROL_PORT, LCD_EN, LOW); 
-	_delay_ms(5);										
+	_delay_ms(50);										
 }
 
 void LCD_cursor_shift_right (void)
@@ -90,6 +91,11 @@ void LCD_set_xy (u8 row, u8 column)
 	
 }
 
+void LCD_clear(void)						//done by me 
+{
+	  LCD_voidSendCMD(clear_display);
+}
+
 void LCD_print_string(const char *str)		//copied from github + modified by me 
 {
 	/*	Without using "const", str was stored in flash memory (with the code)	*/
@@ -104,7 +110,7 @@ void LCD_print_string(const char *str)		//copied from github + modified by me
 	}
 }
 
-void LCD_write_num(u32 num)			//copied from github + modified by me
+void LCD_write_num(u32 num)					//copied from github + modified by me
 {			
 	u32 txt[10] = {0};
 	s16 i = 0;

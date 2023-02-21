@@ -16,31 +16,7 @@ u32 time_counter = 0;
 
 ISR (TIMER0_OVF_vect)				
 {
-	/*		TIM0_OVF_vect is a naming convention for this already built library <avr/interrupt.h>		*/
-	/*		there are naming conventions for each interrupt in this library (visit their website)		*/
-	/*		Naming Convention: TIM0_OVF_vect means the Timer0 overflow interrupt						*/
-	 
-	  //What Happens When Interrupt Occur:
-	  ISR_Counter++;  
-	  if (ISR_Counter == 3907)
-	  {
-		  time_counter++; 
-		  ISR_Counter = 0;
-		  //TCTN0 initial value 
-		  TCNT0 = 64; 
-		  
-		  //printing the time
-		  LCD_voidSendCMD(clear_display);
-		  LCD_write_num(time_counter);
-		  
-		  //toggle led 
-		  TOG_BIT(PORTA_REG,0);	  
-	  }	  
-	  
-	  
-		/*		Debugging		*/
-		//LCD_voidSendCMD(clear_display);
-		//LCD_write_num(ISR_Counter);
+	// do nothing 
 }
 
 
@@ -49,8 +25,7 @@ void Timer_Counter_Init(void)
 		//Set global interrupt enable bit
 		SET_BIT(SREG,7);							
 	
-		//set timer initial value 
-		TCNT0 = 0;
+		OCR0 = Duty_cycle * 256;
 		
 		
 		//configure the timer modes (normal, pwm, ...) 
@@ -62,7 +37,7 @@ void Timer_Counter_Init(void)
 			CLR_BIT(TCCR0,WGM01);
 		}
 		
-		/*		PWM	Mode	*/
+		/*		PWM, Phase Correct	Mode	*/
 		else if (Timer_Mode == 2) 	
 		{
 			SET_BIT(TCCR0,WGM00);
@@ -125,28 +100,28 @@ void Timer_Counter_Init(void)
 		//configure the compare match (PWM)
 		
 			//check PWM or non PWM//
-		if (Compare_Output_Mode_pwm == -1)
+		if (Compare_Output_Mode_fast_pwm == -1)
 		{
 			// do nothing 
 			// this means i'm non-PWM modes
 		}
 		
 		/*		0C0 Disconnected 			*/
-		else if (Compare_Output_Mode_non_pwm == 1)
+		else if (Compare_Output_Mode_fast_pwm == 1)
 		{
 			CLR_BIT(TCCR0,COM00);
 			CLR_BIT(TCCR0,COM01);
 		}
 
 		/*		Clear_OC0		 	*/
-		else if (Compare_Output_Mode_non_pwm == 2)
+		else if (Compare_Output_Mode_fast_pwm == 2)
 		{
 			CLR_BIT(TCCR0,COM00);
 			SET_BIT(TCCR0,COM01);
 		}		
 			
 		/*		Set 0C0  			*/
-		else if (Compare_Output_Mode_non_pwm == 3)
+		else if (Compare_Output_Mode_fast_pwm == 3)
 		{
 			SET_BIT(TCCR0,COM00);
 			SET_BIT(TCCR0,COM01);		
