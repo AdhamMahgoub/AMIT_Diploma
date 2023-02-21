@@ -4,7 +4,16 @@
 #include "DIO_interface.h"
 #include "DIO_private.h"
 
-/*			example: DIO_voidSetPinDirection(PORTA, PIN0, OUTPUT)	*/
+
+/* Explanation -- Examples
+		example: DIO_voidSetPinDirection	(PORTA, PIN0, OUTPUT)	
+		example: DIO_voidSetPinValue		(PORTA, PIN0, HIGH)			
+		example: DIO_u8GetPinValue			(PORTA, PIN0)	
+		example: DIO_voidSetPortValue		(PORTA, NUMBER 'BINARY')
+		example: DIO_voidSetPortDirection	(PORTA, 'BINARY')
+*/		
+
+
 void DIO_voidSetPinDirection (u8 PORTID, u8 PINID, u8 Direction)
 {
 	/*		Range Check			*/
@@ -44,8 +53,7 @@ void DIO_voidSetPinDirection (u8 PORTID, u8 PINID, u8 Direction)
 }
 
 
-/*			example: DIO_voidSetPinValue(PORTA, PIN0, HIGH)			*/
-void DIO_voidSetPinValue (u8 PORTID, u8 PINID, u8 value)
+void DIO_voidSetPinValue (u8 PORTID, u8 PINID, u8 Value)
 {
 	/*		Range Check			*/
 	if((PORTID < 4) && (PINID < 8))
@@ -81,7 +89,6 @@ void DIO_voidSetPinValue (u8 PORTID, u8 PINID, u8 value)
 }
 
 
-/*			example: DIO_u8GetPinValue(PORTA, PIN0)					*/
 u8 DIO_u8GetPinValue (u8 PORTID, u8 PINID)
 {
 	u8 Local_u8Data = 0xFF; 
@@ -109,7 +116,7 @@ u8 DIO_u8GetPinValue (u8 PORTID, u8 PINID)
 }
 
 
-void DIO_SetPortValue(u8 PORTID, u8 Value)
+void DIO_voidSetPortValue(u8 PORTID, u8 Value)
 {
 	
 	/*		Range Check			*/
@@ -117,11 +124,34 @@ void DIO_SetPortValue(u8 PORTID, u8 Value)
 	{
 		switch (PORTID)
 			{	
-			//SET 	= 	means set bit to 1 
 			case PORTA	: 	PORTA_REG = Value;		break; 
 			case PORTB	: 	PORTB_REG = Value;		break; 
 			case PORTC	: 	PORTC_REG = Value;		break; 
 			case PORTD	: 	PORTD_REG = Value;		break; 
+			}
+	}
+	
+	else 
+	{
+		//Return ERROR
+	}
+	
+	
+}
+
+
+void DIO_voidSetPortDirection(u8 PORTID, u8 Direction)
+{
+	
+	/*		Range Check			*/
+	if (PORTID < 4)
+	{
+		switch (PORTID)
+			{	
+			case PORTA	: 	DDRA_REG = Direction;		break; 
+			case PORTB	: 	DDRB_REG = Direction;		break; 
+			case PORTC	: 	DDRC_REG = Direction;		break; 
+			case PORTD	: 	DDRD_REG = Direction;		break; 
 			}
 	}
 	

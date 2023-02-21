@@ -10,15 +10,13 @@ GET		= Read input
 */
 
 /*			SET		particular Bit 				*/
-#define 	SET_BIT(REG,BIT)		REG |= (1<<BIT)
-
 /* 			CLEAR	particular Bit 				*/
-#define 	CLR_BIT(REG,BIT)		REG &= ~(1<<BIT)
-
 /* 			TOGGLE	particular Bit 				*/
-#define 	TOG_BIT(REG,BIT)		REG ^= (1<<BIT)
-
 /* 			GET		particular Bit 				*/
+
+#define 	SET_BIT(REG,BIT)		REG |= (1<<BIT)
+#define 	CLR_BIT(REG,BIT)		REG &= ~(1<<BIT)
+#define 	TOG_BIT(REG,BIT)		REG ^= (1<<BIT)
 #define 	GET_BIT(REG,BIT)		(REG>>BIT)&1
 
 #endif
