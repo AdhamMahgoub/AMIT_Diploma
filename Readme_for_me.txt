@@ -5,11 +5,5 @@
 - changed the folder/file names 
 - removed the microchip studio files (left the debug folder only) 
 - added screenshots
-
-
-- removed the duplicates
+- removed the duplicates (the files in notion are as they are -- no changes) 
 - uploaded to github 
-
-
-
-- will try to reduce the duplicates as much as possible
