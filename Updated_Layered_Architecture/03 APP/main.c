@@ -9,19 +9,20 @@
 #include "Timer_interface.h"
 
 
+
+
 int main(void)
 {
   
-  
-/*	Debugging using the LCD	*/
+  	//	LCD Initialization		//
   	LCD_voidInit();
-  	LCD_set_xy(0,0);
-	LCD_print_string ("Adham");
 
-
-  
 	//	Timer Initialization 	//
 	Timer_Counter_Init(); 
+	
+	//	LED						//
+	DIO_voidSetPinDirection(PORTA, 0, OUTPUT);
+
 	
 
     while(1)

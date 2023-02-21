@@ -6,7 +6,7 @@
 #define Timer_Mode						Normal									//	normal, pwm, phase correct, ctc, fast pwm
 #define Compare_Output_Mode_non_pwm		OC0_Disconnected_non_pwm				//	not used, disconnected, toggle, clear, set
 #define Compare_Output_Mode_pwm			not_used								//	not used, disconnected, toggle, clear, set
-#define Timer_clock_select				falling_edge							//	falling_edge, rising_edge, prescalar 
+#define Timer_clock_select				prescalar_8								//	falling_edge, rising_edge, prescalar 
 /*		End of user config				*/
 
 

@@ -2,12 +2,17 @@
 #include "BIT_MATH.h"
 
 #include "DIO_interface.h"
+#include "DIO_private.h"
 
 #include "LCD_interface.h"
 #include "Timer_private.h"
 #include "Timer_config.h"
 
+
 #include <avr/interrupt.h>		
+
+u32 ISR_Counter	= 0;
+u32 time_counter = 0;
 
 ISR (TIMER0_OVF_vect)				
 {
@@ -15,14 +20,27 @@ ISR (TIMER0_OVF_vect)
 	/*		there are naming conventions for each interrupt in this library (visit their website)		*/
 	/*		Naming Convention: TIM0_OVF_vect means the Timer0 overflow interrupt						*/
 	 
-	 
-	 
-	  //What Happens When Interrupt Occur: Toggle Led
-	  DIO_voidSetPinDirection(PORTA, 0, OUTPUT); //output for the LED
-	  TOG_BIT(PORTA, 0);
+	  //What Happens When Interrupt Occur:
+	  ISR_Counter++;  
+	  if (ISR_Counter == 3907)
+	  {
+		  time_counter++; 
+		  ISR_Counter = 0;
+		  //TCTN0 initial value 
+		  TCNT0 = 64; 
+		  
+		  //printing the time
+		  LCD_voidSendCMD(clear_display);
+		  LCD_write_num(time_counter);
+		  
+		  //toggle led 
+		  TOG_BIT(PORTA_REG,0);	  
+	  }	  
 	  
-	  //Set TCNT0 to 254 when ISR occur (to count twice then achieve the ISR again)
-	  TCNT0 = 254;
+	  
+		/*		Debugging		*/
+		//LCD_voidSendCMD(clear_display);
+		//LCD_write_num(ISR_Counter);
 }
 
 
@@ -32,7 +50,7 @@ void Timer_Counter_Init(void)
 		SET_BIT(SREG,7);							
 	
 		//set timer initial value 
-		TCNT0 = 253;
+		TCNT0 = 0;
 		
 		
 		//configure the timer modes (normal, pwm, ...) 
