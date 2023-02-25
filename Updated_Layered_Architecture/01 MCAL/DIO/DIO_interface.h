@@ -21,7 +21,8 @@
 #define 	PIN6		6
 #define 	PIN7		7
 
-/* Explanation -- Examples
+/*		How to use the Functions: 
+		
 		example: DIO_voidSetPinDirection	(PORTA, PIN0, OUTPUT)	
 		example: DIO_voidSetPinValue		(PORTA, PIN0, HIGH)			
 		example: DIO_u8GetPinValue			(PORTA, PIN0)	
@@ -32,7 +33,6 @@
 void DIO_voidSetPinDirection (u8 PORTID, u8 PINID, u8 Direction);
 void DIO_voidSetPinValue (u8 PORTID, u8 PINID, u8 value);
 u8 DIO_u8GetPinValue (u8 PORTID, u8 PINID);
-
 
 void DIO_voidSetPortValue(u8 PORTID, u8 Value);
 void DIO_voidSetPortDirection(u8 PORTID, u8 Direction);
