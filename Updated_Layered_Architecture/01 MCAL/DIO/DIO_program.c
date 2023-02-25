@@ -5,7 +5,8 @@
 #include "DIO_private.h"
 
 
-/* Explanation -- Examples
+/* 		Explanation -- Examples
+
 		example: DIO_voidSetPinDirection	(PORTA, PIN0, OUTPUT)	
 		example: DIO_voidSetPinValue		(PORTA, PIN0, HIGH)			
 		example: DIO_u8GetPinValue			(PORTA, PIN0)	
