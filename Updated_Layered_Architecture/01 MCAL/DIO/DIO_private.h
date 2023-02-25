@@ -1,17 +1,18 @@
 #ifndef			DIO_PRIVATE_H
 #define 		DIO_PRIVATE_H
 
-/*explanation
-	DDR: 	direction 
+/*	Notes: 
+
+	DDR: 	To control direction of pins (input or output)
 	PORT: 	OUTPUT
 	PIN: 	INPUT
 */
 
 
 /*				PORTA REGISTERS				*/
-#define 		PORTA_REG		*((volatile u8 *)0x3B) //output
-#define 		DDRA_REG		*((volatile u8 *)0x3A) //DIRECTION
-#define 		PINA_REG		*((volatile u8 *)0x39) //input
+#define 		PORTA_REG		*((volatile u8 *)0x3B)
+#define 		DDRA_REG		*((volatile u8 *)0x3A) 
+#define 		PINA_REG		*((volatile u8 *)0x39) 
 
 /*				PORTB REGISTERS				*/
 #define 		PORTB_REG		*((volatile u8 *)0x38)
