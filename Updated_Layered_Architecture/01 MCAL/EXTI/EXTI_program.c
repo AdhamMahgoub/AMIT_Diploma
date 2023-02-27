@@ -3,11 +3,11 @@
 
 #include "EXTI_interface.h"
 #include "EXTI_private.h"
-#include "EXTI_config.h"    //hwa makatabhash 
+#include "EXTI_config.h"  
 
-/*		Adjusting the global pointer to function (EXTI0_CallBack)								*/
-/*		This is a Global Pointer to function 													*/
-/*		will be used here to communicate between 2 functions (EXTI0_SetCallBack	&& __vector_1)	*/
+/*		Adjusting the global pointer to function (EXTI0_CallBack)								
+		This is a Global Pointer to function 													
+		will be used here to communicate between 2 functions (EXTI0_SetCallBack	&& __vector_1)	*/
 #ifndef 	NULL
 #define 	NULL	(void *)0
 #endif
@@ -16,9 +16,9 @@ static void (*EXTI0_CallBack) (void) = NULL;
 
 void EXTI0_SetCallBack(void(*pf)(void)) 
 {
-	/*		function to communicate between 2 .c files (EXT_program.c && main.c 	*/
-	/*		takes address of function from the main.c w tgebha hena					*/
-	/*		hayeb2a gowaha el address bta3 el EXTI0_fun 							*/
+	/*		Function to communicate between 2 .c files (EXT_program.c && main.c)	*/
+	/*		Takes address of function from the main.c w and retrieves it here		*/
+	/*		Will containt the Address of  EXTI0_fun 								*/
 	/*		pf is a pointer to function 											*/
 	EXTI0_CallBack = pf; 
 }

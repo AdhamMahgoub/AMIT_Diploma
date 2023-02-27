@@ -5,7 +5,7 @@
 
 #include "SPI_interface.h"
 #include "SPI_private.h"
-#include "EXTI_private.h"	//	For Global Interrupt Enable
+#include "EXTI_private.h"	//	For Global Interrupt Enable (SREG)
 
 
 void	SPI_initMaster(void)
@@ -28,7 +28,7 @@ void	SPI_initMaster(void)
 	// 	SPI Interrupt Enable
 	SET_BIT(SPCR, SPIE_bit);
 
-	/*			The Pins that are not written are Zeroes		*/
+	/*			The Pins that are not written are Zeroes by Default		*/
 	
 }
 

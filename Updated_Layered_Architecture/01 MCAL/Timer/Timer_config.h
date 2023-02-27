@@ -2,7 +2,7 @@
 #define TIMER_CONFIG_H_
 
 
-/*		The user chooses from here		*/								/*		Possible Options (spelling not correct)			*/
+/*		The user chooses from here		*/								/*		Possible Options 			*/
 #define Timer_Mode						Fast_PWM						//	normal, pwm, phase correct, ctc, fast pwm
 #define Compare_Output_Mode_non_pwm		not_used						//	not used (using pwm "fast or phase"), disconnected, toggle, clear, set
 #define Compare_Output_Mode_fast_pwm	Set_Oc0_fast_pwm				//	not used (using non-pwm or phase pwm), disconnected, toggle, clear, set

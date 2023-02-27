@@ -128,9 +128,6 @@ void Timer_Counter_Init(void)
 		}
 		
 
-		
-
-		
 		//configure the Timer Clock Select 		*/
 		/*	Falling Edge			*/
 		if (Timer_clock_select == 1)

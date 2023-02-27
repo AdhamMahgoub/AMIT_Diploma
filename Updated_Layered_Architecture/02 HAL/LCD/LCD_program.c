@@ -4,10 +4,8 @@
 #include "DIO_interface.h"
 #include "LCD_interface.h"
 
-#include <util/delay.h>
+#include <util/delay.h> 	//need to include delay -- will be added in the main.c file 
 
-//need to include delay -- will be added in the main.c file 
-//note that i didn't need to include the DIO_private.h -- because i didn't need it 
 
 void LCD_voidInit(void)
 { 
@@ -18,9 +16,7 @@ void LCD_voidInit(void)
 	DIO_voidSetPinDirection(LCD_CONTROL_PORT, PIN2, OUTPUT);
 	
 	_delay_ms(45); 				/*	LCD Power ON delay always > 15ms	*/
-	
-	
-												
+											
 	LCD_voidSendCMD (function_set);		    	//function set 					Initialization of 16x2 LCD in 8 bit mode 
 	LCD_voidSendCMD (display_on_off_control);	//display on/off control      	Display ON Cursor OFF  
 	LCD_voidSendCMD (entry_mode_set);		    //entry mode set              	Auto Increment Cursor 
@@ -58,7 +54,6 @@ void LCD_voidWriteData(u8 Data)
     4. DATA =  CMD
 	*/
 	
-
 	DIO_voidSetPinValue(LCD_CONTROL_PORT, LCD_RS, HIGH); 	/*		1- RS = 1		*/
 	DIO_voidSetPinValue(LCD_CONTROL_PORT, LCD_RW, LOW);		/*		2- RW = 0		*/
 	/*		3- EN pulse		*/
@@ -77,7 +72,6 @@ void LCD_cursor_shift_right (void)
 
 void LCD_set_xy (u8 row, u8 column)
 {	
-	
 	//shifting y (row -- horizontal) 
 	if (row == 1)
 		LCD_voidSendCMD(DDRAM_to_2nd_row); //sends the DDRAM to the 2nd row 
@@ -87,8 +81,7 @@ void LCD_set_xy (u8 row, u8 column)
 	for (int i=0; i<column; i++)
 	{
 		LCD_cursor_shift_right();
-	}
-	
+	}	
 }
 
 void LCD_clear(void)						//done by me 
@@ -132,5 +125,4 @@ void LCD_write_num(u32 num)					//copied from github + modified by me
 		LCD_voidWriteData(txt[i]);
 		i--;
 	}
-	
 }

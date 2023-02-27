@@ -28,12 +28,13 @@ void LCD_clear(void);					//done by me
 void LCD_print_string(const char *str); //copied from github + modified by me 
 void LCD_write_num(u32 num);			//copied from github + modified by me 
 
-#endif
+/*  Example on how to use the Functions
 
-/*example
-
-LCD_voidInit(void);
-LCD_voidSendCMD(CMD);
-LCD_voidWriteData(DATA);
+    LCD_voidInit(void);
+    LCD_voidSendCMD(CMD);
+    LCD_voidWriteData(DATA);
 
 */
+
+#endif
+

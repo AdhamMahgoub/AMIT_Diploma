@@ -24,7 +24,6 @@ void DIO_voidSetPinDirection (u8 PORTID, u8 PINID, u8 Direction)
 		{
 			switch (PORTID)
 			{	
-			//SET 	= 	means set bit to 1 
 			case PORTA	: 	SET_BIT(DDRA_REG, PINID);		break; 
 			case PORTB	: 	SET_BIT(DDRB_REG, PINID);		break; 
 			case PORTC	: 	SET_BIT(DDRC_REG, PINID);		break; 
@@ -37,7 +36,6 @@ void DIO_voidSetPinDirection (u8 PORTID, u8 PINID, u8 Direction)
 		{
 			switch (PORTID)
 			{	
-			//CLEAR 	= 	means set bit to 0 
 			case PORTA	: 	CLR_BIT(DDRA_REG, PINID);		break; 
 			case PORTB	: 	CLR_BIT(DDRB_REG, PINID);		break; 
 			case PORTC	: 	CLR_BIT(DDRC_REG, PINID);		break; 
@@ -136,8 +134,6 @@ void DIO_voidSetPortValue(u8 PORTID, u8 Value)
 	{
 		//Return ERROR
 	}
-	
-	
 }
 
 

@@ -8,6 +8,4 @@ void	SPI_sendByte(u8 data);
 u8		SPI_recieveByte(void);
 
 
-
-
 #endif

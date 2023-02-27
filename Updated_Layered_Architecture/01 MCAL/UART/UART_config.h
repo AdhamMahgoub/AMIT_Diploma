@@ -2,6 +2,4 @@
 #define UART_config_h
 
 
-
-
 #endif
