@@ -1,9 +1,9 @@
-#include "STD_TYPES.H"
-#include "BIT_MATH.h"
+#include "../../LIB/STD_TYPES.H"
+#include "../../LIB/BIT_MATH.h"
 
-#include "DIO_interface.h"
-#include "LCD_interface.h"
-#include "keypad_interface.h"
+#include "../../MCAL/DIO/DIO_interface.h"
+#include "../../HAL/LCD/LCD_interface.h"
+#include "../../HAL/Keypad/keypad_interface.h"
 
 #include <util/delay.h>
 

@@ -1,7 +1,7 @@
-#include "STD_TYPES.H"
-#include "BIT_MATH.h"
+#include "../../LIB/STD_TYPES.H"
+#include "../../LIB/BIT_MATH.h"
 
-#include "DIO_interface.h"
+#include "../../MCAL/DIO/DIO_interface.h"
 #include "LCD_interface.h"
 
 #include <util/delay.h> 	//need to include delay -- will be added in the main.c file 

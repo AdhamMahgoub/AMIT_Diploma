@@ -1,5 +1,5 @@
-#include "STD_TYPES.h"
-#include "BIT_MATH.h"
+#include "../../LIB/STD_TYPES.H"
+#include "../../LIB/BIT_MATH.h"
 
 #include "DIO_interface.h"
 #include "DIO_private.h"

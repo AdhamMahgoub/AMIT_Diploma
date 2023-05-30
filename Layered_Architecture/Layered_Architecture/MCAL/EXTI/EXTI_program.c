@@ -1,5 +1,5 @@
-#include "STD_TYPES.h"
-#include "BIT_MATH.h"
+#include "../../LIB/STD_TYPES.H"
+#include "../../LIB/BIT_MATH.h"
 
 #include "EXTI_interface.h"
 #include "EXTI_private.h"

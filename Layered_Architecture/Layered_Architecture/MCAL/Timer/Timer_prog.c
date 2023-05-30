@@ -1,10 +1,9 @@
-#include "STD_TYPES.h"
-#include "BIT_MATH.h"
+#include "../../LIB/STD_TYPES.H"
+#include "../../LIB/BIT_MATH.h"
 
-#include "DIO_interface.h"
-#include "DIO_private.h"
+#include "../../MCAL/DIO/DIO_interface.h"
+#include "../../HAL/LCD/LCD_interface.h"
 
-#include "LCD_interface.h"
 #include "Timer_private.h"
 #include "Timer_config.h"
 

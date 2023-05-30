@@ -1,11 +1,11 @@
-#include "STD_TYPES.h"
-#include "BIT_MATH.h"
+#include "../../../LIB/STD_TYPES.H"
+#include "../../../LIB/BIT_MATH.h"
 
-#include "DIO_interface.h"
+#include "../../DIO/DIO_interface.h"
 
 #include "SPI_interface.h"
 #include "SPI_private.h"
-#include "EXTI_private.h"	//	For Global Interrupt Enable (SREG)
+#include "../../EXTI/EXTI_private.h"	//	For Global Interrupt Enable (SREG)
 
 
 void	SPI_initMaster(void)
