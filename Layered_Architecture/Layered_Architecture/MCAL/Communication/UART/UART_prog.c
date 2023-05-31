@@ -45,3 +45,16 @@ u8 UART_RecieveByte (void)
 	//Return the received data 
 	return(UDR);							/* Return the byte (3ashan el Data fel UDR)  */
 }
+
+void UART_send_string(const char *s)		//A function to Transmit String
+{
+	while (*s)
+	UART_SendByte(*s++);
+}
+
+void UART_send_float(float x)			//A function to Transmit float
+{
+	char arr[10] = {0};
+	sprintf(arr, "%.3f", x);
+	UART_send_string(arr);
+}
