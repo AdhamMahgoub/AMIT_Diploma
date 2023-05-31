@@ -1,13 +1,6 @@
 #ifndef			DIO_PRIVATE_H
 #define 		DIO_PRIVATE_H
 
-/*	Notes: 
-
-	DDR: 	Control direction of pins (input or output)
-	PORT: 	OUTPUT
-	PIN: 	INPUT
-*/
-
 
 #define PORTA_REG_Address	0x3B
 #define DDRA_REG_Address	0x3A

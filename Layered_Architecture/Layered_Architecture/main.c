@@ -5,14 +5,14 @@
 
 #include "MCAL/Communication/UART/UART_interface.h"
 
+
+#include "MCAL/DIO/DIO_private.h"
+
 int main(void)
 {
 	
-	//UART_Init();
 	
-
-	
-				
+		
 				
 	while(1)
     {	

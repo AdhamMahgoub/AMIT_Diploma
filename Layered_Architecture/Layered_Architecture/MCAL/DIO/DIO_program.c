@@ -5,6 +5,14 @@
 #include "DIO_private.h"
 
 
+/*	Notes: 
+
+	DDR: 	Control direction of pins (input or output)
+	PORT: 	OUTPUT
+	PIN: 	INPUT
+*/
+
+
 /* 		Explanation -- Examples
 
 		example: DIO_voidSetPinDirection	(PORTA, PIN0, OUTPUT)	
@@ -47,6 +55,7 @@ void DIO_voidSetPinDirection (u8 PORTID, u8 PINID, u8 Direction)
 	else 
 	{
 			/*	Return ERROR 	*/
+			return; 
 	}
 	
 }
@@ -61,7 +70,7 @@ void DIO_voidSetPinValue (u8 PORTID, u8 PINID, u8 Value)
 		{
 			switch (PORTID)
 			{	
-			//PORT REGISTER is responsible for output
+			//PORT REGISTER is responsible for Output
 			case PORTA	: 	SET_BIT(PORTA_REG, PINID);		break; 
 			case PORTB	: 	SET_BIT(PORTB_REG, PINID);		break; 
 			case PORTC	: 	SET_BIT(PORTC_REG, PINID);		break; 
@@ -83,6 +92,7 @@ void DIO_voidSetPinValue (u8 PORTID, u8 PINID, u8 Value)
 	else 
 	{
 			/*	Return ERROR 	*/
+			return; 
 	}
 	
 }
@@ -95,21 +105,20 @@ u8 DIO_u8GetPinValue (u8 PORTID, u8 PINID)
 	/*		Range Check			*/
 	if((PORTID < 4) && (PINID < 8))
 	{
-
-			switch (PORTID)
-			{
-			//PIN REGISTER is responsible for input
-			case PORTA	:	Local_u8Data =  	GET_BIT(PINA_REG, PINID);		break; 
-			case PORTB	:	Local_u8Data =  	GET_BIT(PINB_REG, PINID);		break; 
-			case PORTC	:	Local_u8Data =  	GET_BIT(PINC_REG, PINID);		break; 
-			case PORTD	:	Local_u8Data =  	GET_BIT(PIND_REG, PINID);		break; 
-			}
-		
+		switch (PORTID)
+		{
+		//PIN REGISTER is responsible for input
+		case PORTA	:	Local_u8Data =  	GET_BIT(PINA_REG, PINID);		break; 
+		case PORTB	:	Local_u8Data =  	GET_BIT(PINB_REG, PINID);		break; 
+		case PORTC	:	Local_u8Data =  	GET_BIT(PINC_REG, PINID);		break; 
+		case PORTD	:	Local_u8Data =  	GET_BIT(PIND_REG, PINID);		break; 
+		}	
 	}		
 
 	else 
 	{
 			/*	Return ERROR 	*/
+			return -1; 
 	}
 	return Local_u8Data;
 }
@@ -133,11 +142,12 @@ void DIO_voidSetPortValue(u8 PORTID, u8 Value)
 	else 
 	{
 		//Return ERROR
+		return; 
 	}
 }
 
 
-void DIO_voidSetPortDirection(u8 PORTID, u8 Direction)
+void DIO_voidSetPortDirection(u8 PORTID, u8 Direction)		 
 {
 	
 	/*		Range Check			*/
@@ -155,6 +165,7 @@ void DIO_voidSetPortDirection(u8 PORTID, u8 Direction)
 	else 
 	{
 		//Return ERROR
+		return; 
 	}
 	
 	

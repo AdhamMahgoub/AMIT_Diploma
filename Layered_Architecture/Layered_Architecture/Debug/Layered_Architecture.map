@@ -216,11 +216,11 @@ Discarded input sections
                 0x0000000000000000       0x24 MCAL/DIO/DIO_program.o
  .debug_info    0x0000000000000000      0x412 MCAL/DIO/DIO_program.o
  .debug_abbrev  0x0000000000000000       0xb8 MCAL/DIO/DIO_program.o
- .debug_loc     0x0000000000000000      0x2d7 MCAL/DIO/DIO_program.o
+ .debug_loc     0x0000000000000000      0x2a0 MCAL/DIO/DIO_program.o
  .debug_aranges
                 0x0000000000000000       0x40 MCAL/DIO/DIO_program.o
  .debug_ranges  0x0000000000000000       0x30 MCAL/DIO/DIO_program.o
- .debug_line    0x0000000000000000      0x1e7 MCAL/DIO/DIO_program.o
+ .debug_line    0x0000000000000000      0x1ee MCAL/DIO/DIO_program.o
  .debug_str     0x0000000000000000       0x11 MCAL/DIO/DIO_program.o
  .comment       0x0000000000000000       0x30 MCAL/DIO/DIO_program.o
  .debug_frame   0x0000000000000000       0x64 MCAL/DIO/DIO_program.o
@@ -1114,12 +1114,12 @@ END GROUP
  .debug_abbrev  0x00000000000004e1       0xa6 MCAL/EXTI/EXTI_program.o
  .debug_abbrev  0x0000000000000587       0x6f MCAL/Timer/Timer_prog.o
 
-.debug_line     0x0000000000000000      0x36c
+.debug_line     0x0000000000000000      0x36e
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x119 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega32.o
- .debug_line    0x0000000000000119       0x37 main.o
- .debug_line    0x0000000000000150      0x112 MCAL/EXTI/EXTI_program.o
- .debug_line    0x0000000000000262      0x10a MCAL/Timer/Timer_prog.o
+ .debug_line    0x0000000000000119       0x39 main.o
+ .debug_line    0x0000000000000152      0x112 MCAL/EXTI/EXTI_program.o
+ .debug_line    0x0000000000000264      0x10a MCAL/Timer/Timer_prog.o
 
 .debug_frame    0x0000000000000000      0x130
  *(.debug_frame)
