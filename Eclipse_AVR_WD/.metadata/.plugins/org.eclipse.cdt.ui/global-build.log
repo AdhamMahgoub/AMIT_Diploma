@@ -1,0 +1,313 @@
+12:39:14 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: C:/Users/adham/Desktop/Layered_Architecture/MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "C:/Users/adham/Desktop/Layered_Architecture/MCAL/Communication/UART/UART_prog.c"
+Finished building: C:/Users/adham/Desktop/Layered_Architecture/MCAL/Communication/UART/UART_prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:1:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../main.c:3:27: error: LIB/STD_TYPES.h: No such file or directory
+../main.c:4:26: error: LIB/BIT_MATH.h: No such file or directory
+../main.c:6:52: error: MCAL/Communication/UART/UART_interface.h: No such file or directory
+../main.c:7:36: error: MCAL/DIO/DIO_interface.h: No such file or directory
+../main.c:8:34: error: MCAL/DIO/DIO_private.h: No such file or directory
+../main.c: In function 'main':
+../main.c:14: error: 'DDRA_REG' undeclared (first use in this function)
+../main.c:14: error: (Each undeclared identifier is reported only once
+../main.c:14: error: for each function it appears in.)
+../main.c:15: error: 'PORTA_REG' undeclared (first use in this function)
+../main.c:17: warning: implicit declaration of function 'DIO_voidSetPinDirection'
+../main.c:17: error: 'PORTB' undeclared (first use in this function)
+../main.c:17: error: 'PIN0' undeclared (first use in this function)
+../main.c:17: error: 'OUTPUT' undeclared (first use in this function)
+../main.c:21: warning: implicit declaration of function 'GET_BIT'
+../main.c:21: error: 'PINA_REG' undeclared (first use in this function)
+../main.c:22: warning: implicit declaration of function 'DIO_voidSetPinValue'
+../main.c:22: error: 'HIGH' undeclared (first use in this function)
+../main.c:25: error: 'LOW' undeclared (first use in this function)
+make: *** [main.o] Error 1
+12:41:54 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../Src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -c -o "Src/main.o" "../Src/main.c"
+../Src/main.c:1:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Src/main.c:3:27: error: LIB/STD_TYPES.h: No such file or directory
+../Src/main.c:4:26: error: LIB/BIT_MATH.h: No such file or directory
+../Src/main.c:6:52: error: MCAL/Communication/UART/UART_interface.h: No such file or directory
+../Src/main.c:7:36: error: MCAL/DIO/DIO_interface.h: No such file or directory
+../Src/main.c:8:34: error: MCAL/DIO/DIO_private.h: No such file or directory
+../Src/main.c: In function 'main':
+../Src/main.c:15: error: 'DDRA_REG' undeclared (first use in this function)
+../Src/main.c:15: error: (Each undeclared identifier is reported only once
+../Src/main.c:15: error: for each function it appears in.)
+../Src/main.c:16: error: 'PORTA_REG' undeclared (first use in this function)
+../Src/main.c:18: warning: implicit declaration of function 'DIO_voidSetPinDirection'
+../Src/main.c:18: error: 'PORTB' undeclared (first use in this function)
+../Src/main.c:18: error: 'PIN0' undeclared (first use in this function)
+../Src/main.c:18: error: 'OUTPUT' undeclared (first use in this function)
+../Src/main.c:22: warning: implicit declaration of function 'GET_BIT'
+../Src/main.c:22: error: 'PINA_REG' undeclared (first use in this function)
+../Src/main.c:23: warning: implicit declaration of function 'DIO_voidSetPinValue'
+../Src/main.c:23: error: 'HIGH' undeclared (first use in this function)
+../Src/main.c:26: error: 'LOW' undeclared (first use in this function)
+make: *** [Src/main.o] Error 1
+12:42:19 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:1:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../main.c:3:27: error: LIB/STD_TYPES.h: No such file or directory
+../main.c:4:26: error: LIB/BIT_MATH.h: No such file or directory
+../main.c:6:52: error: MCAL/Communication/UART/UART_interface.h: No such file or directory
+../main.c:7:36: error: MCAL/DIO/DIO_interface.h: No such file or directory
+../main.c:8:34: error: MCAL/DIO/DIO_private.h: No such file or directory
+../main.c: In function 'main':
+../main.c:15: error: 'DDRA_REG' undeclared (first use in this function)
+../main.c:15: error: (Each undeclared identifier is reported only once
+../main.c:15: error: for each function it appears in.)
+../main.c:16: error: 'PORTA_REG' undeclared (first use in this function)
+../main.c:18: warning: implicit declaration of function 'DIO_voidSetPinDirection'
+../main.c:18: error: 'PORTB' undeclared (first use in this function)
+../main.c:18: error: 'PIN0' undeclared (first use in this function)
+../main.c:18: error: 'OUTPUT' undeclared (first use in this function)
+../main.c:22: warning: implicit declaration of function 'GET_BIT'
+../main.c:22: error: 'PINA_REG' undeclared (first use in this function)
+../main.c:23: warning: implicit declaration of function 'DIO_voidSetPinValue'
+../main.c:23: error: 'HIGH' undeclared (first use in this function)
+../main.c:26: error: 'LOW' undeclared (first use in this function)
+make: *** [main.o] Error 1
+12:47:01 **** Clean-only build of configuration Debug for project Mastering_Debugging ****
+make clean 
+rm -rf  Mastering_Debugging.hex  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./main.o  sizedummy  Mastering_Debugging.lss  ./MCAL/Timer/Timer_prog.d  ./MCAL/EXTI/EXTI_program.d  ./MCAL/DIO/DIO_program.d  ./MCAL/Communication/UART/UART_prog.d  ./MCAL/Communication/SPI/SPI_prog.d  ./HAL/LCD/LCD_program.d  ./HAL/Keypad/keypad_program.d  ./main.d  Mastering_Debugging.elf
+ 
+12:47:01 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../DIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO_program.d" -MT"DIO_program.o" -c -o "DIO_program.o" "../DIO_program.c"
+In file included from ../DIO_program.c:1:
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:33: error: expected ')' before 'PORTID'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:34: error: expected ')' before 'PORTID'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_u8GetPinValue'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:37: error: expected ')' before 'PORTID'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:38: error: expected ')' before 'PORTID'
+make: *** [DIO_program.o] Error 1
+12:47:05 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../DIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO_program.d" -MT"DIO_program.o" -c -o "DIO_program.o" "../DIO_program.c"
+In file included from ../DIO_program.c:1:
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:33: error: expected ')' before 'PORTID'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:34: error: expected ')' before 'PORTID'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_u8GetPinValue'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:37: error: expected ')' before 'PORTID'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:38: error: expected ')' before 'PORTID'
+make: *** [DIO_program.o] Error 1
+12:47:33 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../DIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO_program.d" -MT"DIO_program.o" -c -o "DIO_program.o" "../DIO_program.c"
+In file included from ../DIO_program.c:1:
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:33: error: expected ')' before 'PORTID'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:34: error: expected ')' before 'PORTID'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_u8GetPinValue'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:37: error: expected ')' before 'PORTID'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:38: error: expected ')' before 'PORTID'
+make: *** [DIO_program.o] Error 1
+12:47:55 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../DIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO_program.d" -MT"DIO_program.o" -c -o "DIO_program.o" "../DIO_program.c"
+In file included from ../DIO_program.c:1:
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:33: error: expected ')' before 'PORTID'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:34: error: expected ')' before 'PORTID'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_u8GetPinValue'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:37: error: expected ')' before 'PORTID'
+../../../../AMIT_Diploma/Eclipse_AVR_WD/Mastering_Debugging/DIO_interface.h:38: error: expected ')' before 'PORTID'
+make: *** [DIO_program.o] Error 1
+12:48:50 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../DIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DIO_program.d" -MT"DIO_program.o" -c -o "DIO_program.o" "../DIO_program.c"
+In file included from ../DIO_program.c:1:
+../DIO_interface.h:33: error: expected ')' before 'PORTID'
+../DIO_interface.h:34: error: expected ')' before 'PORTID'
+../DIO_interface.h:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'DIO_u8GetPinValue'
+../DIO_interface.h:37: error: expected ')' before 'PORTID'
+../DIO_interface.h:38: error: expected ')' before 'PORTID'
+make: *** [DIO_program.o] Error 1
+12:50:14 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:7: error: 'DDRA_REG' undeclared (first use in this function)
+../main.c:7: error: (Each undeclared identifier is reported only once
+../main.c:7: error: for each function it appears in.)
+../main.c:8: error: 'PORTA_REG' undeclared (first use in this function)
+../main.c:10: warning: implicit declaration of function 'DIO_voidSetPinDirection'
+../main.c:10: error: 'OUTPUT' undeclared (first use in this function)
+../main.c:14: warning: implicit declaration of function 'GET_BIT'
+../main.c:14: error: 'PINA_REG' undeclared (first use in this function)
+../main.c:15: warning: implicit declaration of function 'DIO_voidSetPinValue'
+../main.c:15: error: 'HIGH' undeclared (first use in this function)
+../main.c:18: error: 'LOW' undeclared (first use in this function)
+make: *** [main.o] Error 1
+13:11:43 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     136 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:17:51 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../MCAL/Timer/Timer_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Timer/Timer_prog.d" -MT"MCAL/Timer/Timer_prog.o" -c -o "MCAL/Timer/Timer_prog.o" "../MCAL/Timer/Timer_prog.c"
+Finished building: ../MCAL/Timer/Timer_prog.c
+ 
+Building file: ../MCAL/EXTI/EXTI_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/EXTI/EXTI_program.d" -MT"MCAL/EXTI/EXTI_program.o" -c -o "MCAL/EXTI/EXTI_program.o" "../MCAL/EXTI/EXTI_program.c"
+Finished building: ../MCAL/EXTI/EXTI_program.c
+ 
+Building file: ../MCAL/DIO/DIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/DIO/DIO_program.d" -MT"MCAL/DIO/DIO_program.o" -c -o "MCAL/DIO/DIO_program.o" "../MCAL/DIO/DIO_program.c"
+Finished building: ../MCAL/DIO/DIO_program.c
+ 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:58: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:58: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:58: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+Finished building: ../MCAL/Communication/UART/UART_prog.c
+ 
+Building file: ../MCAL/Communication/SPI/SPI_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/SPI/SPI_prog.d" -MT"MCAL/Communication/SPI/SPI_prog.o" -c -o "MCAL/Communication/SPI/SPI_prog.o" "../MCAL/Communication/SPI/SPI_prog.c"
+Finished building: ../MCAL/Communication/SPI/SPI_prog.c
+ 
+Building file: ../HAL/LCD/LCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"HAL/LCD/LCD_program.d" -MT"HAL/LCD/LCD_program.o" -c -o "HAL/LCD/LCD_program.o" "../HAL/LCD/LCD_program.c"
+In file included from ../HAL/LCD/LCD_program.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/LCD/LCD_program.c
+ 
+Building file: ../HAL/Keypad/keypad_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"HAL/Keypad/keypad_program.d" -MT"HAL/Keypad/keypad_program.o" -c -o "HAL/Keypad/keypad_program.o" "../HAL/Keypad/keypad_program.c"
+In file included from ../HAL/Keypad/keypad_program.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/Keypad/keypad_program.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10210 bytes (31.2% Full)
+(.text + .data + .bootloader)
+
+Data:         36 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:19:35 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:1:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10260 bytes (31.3% Full)
+(.text + .data + .bootloader)
+
+Data:         36 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
