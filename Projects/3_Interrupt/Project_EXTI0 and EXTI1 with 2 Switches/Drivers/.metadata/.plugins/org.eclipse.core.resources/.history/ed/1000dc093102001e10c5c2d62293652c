@@ -1,0 +1,76 @@
+#include "../../LIB/STD_TYPES.H"
+#include "../../LIB/BIT_MATH.h"
+
+#include "EXTI_interface.h"
+#include "EXTI_private.h"
+#include "EXTI_config.h"  
+
+enum Sense_Mode {EXTI_FALLING, EXTI_RISING, EXTI_IOC, EXTI_LOW_LEVEL};
+
+
+
+/*		Global Pointer to Function (EXTI0_CallBack)		*/
+#ifndef 	NULL
+#define 	NULL	(void *)0
+#endif
+static void (*EXTI0_CallBack_ptr2func) (void) = NULL;
+
+
+void GIE_voidInterruptEnable(void)
+{
+	SET_BIT(SREG,7);
+}
+
+void GIE_voidInterruptDisable(void)
+{
+	CLR_BIT(SREG,7);
+}
+
+void EXTI0_voidInit(void)
+{
+	/*		EXTI0 => Falling or Rising or both or Low Level		*/
+	#if 	SENSE_MODE == EXTI_FALLING
+			CLR_BIT(MCUCR,0);
+			SET_BIT(MCUCR,1);
+	#elif 	SENSE_MODE == EXTI_RISING
+			SET_BIT(MCUCR,0);
+			SET_BIT(MCUCR,1);
+	#elif 	SENSE_MODE == EXTI_IOC
+			SET_BIT(MCUCR,0);
+			CLR_BIT(MCUCR,1);
+	#elif 	SENSE_MODE == EXTI_LOW_LEVEL
+			CLR_BIT(MCUCR,0);
+			CLR_BIT(MCUCR,1);
+	#else 
+			#error	"Wrong choice of Sense Mode!"
+	#endif 
+	
+	/*	Disable interrupt 0		*/
+	CLR_BIT(GICR,6);
+	/*	Clear INT0 flag (INTF0)	*/
+	SET_BIT(GIFR,6);
+}
+
+void EXTI0_voidEnableInterrupt(void)
+{
+	SET_BIT(GICR,6);
+}
+
+void EXTI0_voidDisableInterrupt(void)
+{
+	CLR_BIT(GICR,6); //hwa katebha set 
+}
+
+void EXTI0_SetCallBack_ptr2func(void(*pf)(void))
+{
+	/*		pf is a pointer to function 					*/
+	/*		pf points to function EXTI0_fun "in main.c" 	*/
+	EXTI0_CallBack_ptr2func = pf;
+}
+
+void __vector_1	(void)
+{
+	/*	This is ISR	Function	*/
+	EXTI0_CallBack_ptr2func();
+}
+
