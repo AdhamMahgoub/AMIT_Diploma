@@ -16,6 +16,6 @@ int main(void)
 {
 
 	UART_Init();
-	UART_send_string("Adham Mahgoub");
+	UART_send_string("Hello");
 
 }

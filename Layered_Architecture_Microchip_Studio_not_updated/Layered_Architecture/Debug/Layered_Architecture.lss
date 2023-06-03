@@ -5,75 +5,85 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .text         000000ae  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00800060  000001ca  2**0
+  1 .data         00000000  00800060  00800060  0000025c  2**0
                   ALLOC, LOAD, DATA
-  2 .comment      0000002f  00000000  00000000  000001ca  2**0
+  2 .comment      0000002f  00000000  00000000  0000025c  2**0
                   CONTENTS, READONLY
-  3 .stack.descriptors.hdr 0000000e  00000000  00000000  000001f9  2**0
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  0000028b  2**0
                   CONTENTS, READONLY
-  4 .debug_aranges 00000098  00000000  00000000  00000207  2**0
+  4 .debug_aranges 000000d8  00000000  00000000  00000299  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000e37  00000000  00000000  0000029f  2**0
+  5 .debug_info   000012e2  00000000  00000000  00000371  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 000005f6  00000000  00000000  000010d6  2**0
+  6 .debug_abbrev 00000761  00000000  00000000  00001653  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   0000036e  00000000  00000000  000016cc  2**0
+  7 .debug_line   0000083e  00000000  00000000  00001db4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000130  00000000  00000000  00001a3c  2**2
+  8 .debug_frame  000001c0  00000000  00000000  000025f4  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000196  00000000  00000000  00001b6c  2**0
+  9 .debug_str    000001b9  00000000  00000000  000027b4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    000000fa  00000000  00000000  00001d02  2**0
+ 10 .debug_loc    000001f4  00000000  00000000  0000296d  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000068  00000000  00000000  00001dfc  2**0
+ 11 .debug_ranges 00000098  00000000  00000000  00002b61  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .text         00000004  00000126  00000126  000001ba  2**1
+ 12 .debug_macro  00010aac  00000000  00000000  00002bf9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .text         00000004  000001ba  000001ba  0000024e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001e64  2**2
+ 14 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000136a8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 14 .text.main    00000002  0000012e  0000012e  000001c2  2**1
+ 15 .progmemx.data 0000000e  000000ae  000000ae  00000142  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, PROGMEMX
+ 16 .text.main    00000014  0000018a  0000018a  0000021e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 15 .text.__vector_1 0000004e  000000ae  000000ae  00000142  2**1
+ 17 .text.UART_Init 0000003e  0000010a  0000010a  0000019e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 16 .bss.EXTI0_CallBack 00000002  00800060  00800060  000001ca  2**0
+ 18 .text.UART_SendByte 00000008  000001b2  000001b2  00000246  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.UART_send_string 0000002c  00000148  00000148  000001dc  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.__vector_1 0000004e  000000bc  000000bc  00000150  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .bss.EXTI0_CallBack 00000002  00800060  00800060  0000025c  2**0
                   ALLOC
- 17 .text.__vector_11 00000014  00000112  00000112  000001a6  2**1
+ 22 .text.__vector_11 00000014  0000019e  0000019e  00000232  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 18 .text.__dummy_fini 00000002  00000130  00000130  000001c4  2**1
+ 23 .text.__dummy_fini 00000002  000001c2  000001c2  00000256  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 19 .text.__dummy_funcs_on_exit 00000002  00000132  00000132  000001c6  2**1
+ 24 .text.__dummy_funcs_on_exit 00000002  000001c4  000001c4  00000258  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 20 .text.__dummy_simulator_exit 00000002  00000134  00000134  000001c8  2**1
+ 25 .text.__dummy_simulator_exit 00000002  000001c6  000001c6  0000025a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 21 .text.exit    00000016  000000fc  000000fc  00000190  2**1
+ 26 .text.exit    00000016  00000174  00000174  00000208  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 22 .text._Exit   00000004  0000012a  0000012a  000001be  2**1
+ 27 .text._Exit   00000004  000001be  000001be  00000252  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	0c 94 2d 00 	jmp	0x5a	; 0x5a <__ctors_end>
-   4:	0c 94 57 00 	jmp	0xae	; 0xae <_etext>
-   8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-   c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  10:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  14:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  18:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  1c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  20:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  24:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  28:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  2c:	0c 94 89 00 	jmp	0x112	; 0x112 <__vector_11>
-  30:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  34:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  38:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  3c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  40:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  44:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  48:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  4c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
-  50:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+   4:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__vector_1>
+   8:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+   c:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  10:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  14:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  18:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  1c:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  20:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  24:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  28:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  2c:	0c 94 cf 00 	jmp	0x19e	; 0x19e <__vector_11>
+  30:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  34:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  38:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  3c:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  40:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  44:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  48:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  4c:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
+  50:	0c 94 dd 00 	jmp	0x1ba	; 0x1ba <__bad_interrupt>
 
 00000054 <.dinit>:
   54:	00 60       	ori	r16, 0x00	; 0
@@ -121,8 +131,8 @@ Disassembly of section .text:
   9c:	e9 35       	cpi	r30, 0x59	; 89
   9e:	f4 07       	cpc	r31, r20
   a0:	31 f7       	brne	.-52     	; 0x6e <__do_copy_data+0x8>
-  a2:	0e 94 97 00 	call	0x12e	; 0x12e <main>
-  a6:	0c 94 7e 00 	jmp	0xfc	; 0xfc <exit>
+  a2:	0e 94 c5 00 	call	0x18a	; 0x18a <main>
+  a6:	0c 94 ba 00 	jmp	0x174	; 0x174 <exit>
 
 000000aa <_exit>:
   aa:	f8 94       	cli
@@ -132,96 +142,232 @@ Disassembly of section .text:
 
 Disassembly of section .text:
 
-00000126 <__bad_interrupt>:
- 126:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+000001ba <__bad_interrupt>:
+ 1ba:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
 
 Disassembly of section .text.main:
 
-0000012e <main>:
- 12e:	ff cf       	rjmp	.-2      	; 0x12e <main>
+0000018a <main>:
+#endif
+
+int main(void)
+{
+
+	UART_Init();
+ 18a:	0e 94 85 00 	call	0x10a	; 0x10a <UART_Init>
+	UART_send_string("Adham Mahgoub");
+ 18e:	6e ea       	ldi	r22, 0xAE	; 174
+ 190:	70 e0       	ldi	r23, 0x00	; 0
+ 192:	80 e0       	ldi	r24, 0x00	; 0
+ 194:	0e 94 a4 00 	call	0x148	; 0x148 <UART_send_string>
+
+}
+ 198:	80 e0       	ldi	r24, 0x00	; 0
+ 19a:	90 e0       	ldi	r25, 0x00	; 0
+ 19c:	08 95       	ret
+
+Disassembly of section .text.UART_Init:
+
+0000010a <UART_Init>:
+{
+	//Wait until the receive is complete  
+	while (	GET_BIT(UCSRA,RXC_bit) == 0);	/* Wait till data is received (to the UDR)	*/
+	//Return the received data 
+	return(UDR);							/* Return the byte (3ashan el Data fel UDR)  */
+}
+ 10a:	8a b1       	in	r24, 0x0a	; 10
+ 10c:	88 60       	ori	r24, 0x08	; 8
+ 10e:	8a b9       	out	0x0a, r24	; 10
+ 110:	8a b1       	in	r24, 0x0a	; 10
+ 112:	80 61       	ori	r24, 0x10	; 16
+ 114:	8a b9       	out	0x0a, r24	; 10
+ 116:	80 b5       	in	r24, 0x20	; 32
+ 118:	80 68       	ori	r24, 0x80	; 128
+ 11a:	80 bd       	out	0x20, r24	; 32
+ 11c:	80 b5       	in	r24, 0x20	; 32
+ 11e:	82 60       	ori	r24, 0x02	; 2
+ 120:	80 bd       	out	0x20, r24	; 32
+ 122:	80 b5       	in	r24, 0x20	; 32
+ 124:	84 60       	ori	r24, 0x04	; 4
+ 126:	80 bd       	out	0x20, r24	; 32
+ 128:	80 b5       	in	r24, 0x20	; 32
+ 12a:	8f 7e       	andi	r24, 0xEF	; 239
+ 12c:	80 bd       	out	0x20, r24	; 32
+ 12e:	80 b5       	in	r24, 0x20	; 32
+ 130:	8f 7d       	andi	r24, 0xDF	; 223
+ 132:	80 bd       	out	0x20, r24	; 32
+ 134:	80 b5       	in	r24, 0x20	; 32
+ 136:	87 7f       	andi	r24, 0xF7	; 247
+ 138:	80 bd       	out	0x20, r24	; 32
+ 13a:	80 b5       	in	r24, 0x20	; 32
+ 13c:	8f 7b       	andi	r24, 0xBF	; 191
+ 13e:	80 bd       	out	0x20, r24	; 32
+ 140:	10 bc       	out	0x20, r1	; 32
+ 142:	87 e6       	ldi	r24, 0x67	; 103
+ 144:	89 b9       	out	0x09, r24	; 9
+ 146:	08 95       	ret
+
+Disassembly of section .text.UART_SendByte:
+
+000001b2 <UART_SendByte>:
+}
+
+void UART_SendByte (u8 Byte)
+{
+	/* Wait for empty transmit buffer */
+	while ( (GET_BIT(UCSRA, UDRE_bit)) == 0 );
+ 1b2:	5d 9b       	sbis	0x0b, 5	; 11
+ 1b4:	fe cf       	rjmp	.-4      	; 0x1b2 <UART_SendByte>
+	
+	/* Put data into buffer, sends the data */
+	UDR = Byte;								//	Data is put into the UDR (Read)
+ 1b6:	8c b9       	out	0x0c, r24	; 12
+ 1b8:	08 95       	ret
+
+Disassembly of section .text.UART_send_string:
+
+00000148 <UART_send_string>:
+	//Return the received data 
+	return(UDR);							/* Return the byte (3ashan el Data fel UDR)  */
+}
+
+void UART_send_string(const char *s)		//A function to Transmit String
+{
+ 148:	cf 92       	push	r12
+ 14a:	df 92       	push	r13
+ 14c:	ef 92       	push	r14
+ 14e:	6b 01       	movw	r12, r22
+ 150:	e8 2e       	mov	r14, r24
+	while (*s)
+ 152:	06 c0       	rjmp	.+12     	; 0x160 <UART_send_string+0x18>
+	UART_SendByte(*s++);
+ 154:	9f ef       	ldi	r25, 0xFF	; 255
+ 156:	c9 1a       	sub	r12, r25
+ 158:	d9 0a       	sbc	r13, r25
+ 15a:	e9 0a       	sbc	r14, r25
+ 15c:	0e 94 d9 00 	call	0x1b2	; 0x1b2 <UART_SendByte>
+	return(UDR);							/* Return the byte (3ashan el Data fel UDR)  */
+}
+
+void UART_send_string(const char *s)		//A function to Transmit String
+{
+	while (*s)
+ 160:	f6 01       	movw	r30, r12
+ 162:	84 91       	lpm	r24, Z
+ 164:	e7 fc       	sbrc	r14, 7
+ 166:	80 81       	ld	r24, Z
+ 168:	81 11       	cpse	r24, r1
+ 16a:	f4 cf       	rjmp	.-24     	; 0x154 <UART_send_string+0xc>
+	UART_SendByte(*s++);
+}
+ 16c:	ef 90       	pop	r14
+ 16e:	df 90       	pop	r13
+ 170:	cf 90       	pop	r12
+ 172:	08 95       	ret
 
 Disassembly of section .text.__vector_1:
 
-000000ae <__vector_1>:
-  ae:	1f 92       	push	r1
-  b0:	0f 92       	push	r0
-  b2:	0f b6       	in	r0, 0x3f	; 63
-  b4:	0f 92       	push	r0
-  b6:	11 24       	eor	r1, r1
-  b8:	2f 93       	push	r18
-  ba:	3f 93       	push	r19
-  bc:	4f 93       	push	r20
-  be:	5f 93       	push	r21
-  c0:	6f 93       	push	r22
-  c2:	7f 93       	push	r23
-  c4:	8f 93       	push	r24
-  c6:	9f 93       	push	r25
-  c8:	af 93       	push	r26
-  ca:	bf 93       	push	r27
-  cc:	ef 93       	push	r30
-  ce:	ff 93       	push	r31
-  d0:	e0 91 60 00 	lds	r30, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
-  d4:	f0 91 61 00 	lds	r31, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
-  d8:	09 95       	icall
-  da:	ff 91       	pop	r31
-  dc:	ef 91       	pop	r30
-  de:	bf 91       	pop	r27
-  e0:	af 91       	pop	r26
-  e2:	9f 91       	pop	r25
-  e4:	8f 91       	pop	r24
-  e6:	7f 91       	pop	r23
-  e8:	6f 91       	pop	r22
-  ea:	5f 91       	pop	r21
-  ec:	4f 91       	pop	r20
-  ee:	3f 91       	pop	r19
-  f0:	2f 91       	pop	r18
-  f2:	0f 90       	pop	r0
-  f4:	0f be       	out	0x3f, r0	; 63
-  f6:	0f 90       	pop	r0
-  f8:	1f 90       	pop	r1
-  fa:	18 95       	reti
+000000bc <__vector_1>:
+void EXTI0_voidDisableInterrupt(void)
+{
+	CLR_BIT(GICR,6); //hwa katebha set 
+}
+void __vector_1	(void)
+{
+  bc:	1f 92       	push	r1
+  be:	0f 92       	push	r0
+  c0:	0f b6       	in	r0, 0x3f	; 63
+  c2:	0f 92       	push	r0
+  c4:	11 24       	eor	r1, r1
+  c6:	2f 93       	push	r18
+  c8:	3f 93       	push	r19
+  ca:	4f 93       	push	r20
+  cc:	5f 93       	push	r21
+  ce:	6f 93       	push	r22
+  d0:	7f 93       	push	r23
+  d2:	8f 93       	push	r24
+  d4:	9f 93       	push	r25
+  d6:	af 93       	push	r26
+  d8:	bf 93       	push	r27
+  da:	ef 93       	push	r30
+  dc:	ff 93       	push	r31
+	
+	/*	Solutions that weren't possible -- only for illustration					*/
+	/*	pf();		 	-- address of the function 									*/
+	/*	EXTI0_fun(); 	-- can't call the function here -- it's in the main.c 		*/
+	
+	EXTI0_CallBack();
+  de:	e0 91 60 00 	lds	r30, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+  e2:	f0 91 61 00 	lds	r31, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  e6:	09 95       	icall
+}
+  e8:	ff 91       	pop	r31
+  ea:	ef 91       	pop	r30
+  ec:	bf 91       	pop	r27
+  ee:	af 91       	pop	r26
+  f0:	9f 91       	pop	r25
+  f2:	8f 91       	pop	r24
+  f4:	7f 91       	pop	r23
+  f6:	6f 91       	pop	r22
+  f8:	5f 91       	pop	r21
+  fa:	4f 91       	pop	r20
+  fc:	3f 91       	pop	r19
+  fe:	2f 91       	pop	r18
+ 100:	0f 90       	pop	r0
+ 102:	0f be       	out	0x3f, r0	; 63
+ 104:	0f 90       	pop	r0
+ 106:	1f 90       	pop	r1
+ 108:	18 95       	reti
 
 Disassembly of section .text.__vector_11:
 
-00000112 <__vector_11>:
- 112:	1f 92       	push	r1
- 114:	0f 92       	push	r0
- 116:	0f b6       	in	r0, 0x3f	; 63
- 118:	0f 92       	push	r0
- 11a:	11 24       	eor	r1, r1
- 11c:	0f 90       	pop	r0
- 11e:	0f be       	out	0x3f, r0	; 63
- 120:	0f 90       	pop	r0
- 122:	1f 90       	pop	r1
- 124:	18 95       	reti
+0000019e <__vector_11>:
+
+u32 ISR_Counter	= 0;
+u32 time_counter = 0;
+
+ISR (TIMER0_OVF_vect)				
+{
+ 19e:	1f 92       	push	r1
+ 1a0:	0f 92       	push	r0
+ 1a2:	0f b6       	in	r0, 0x3f	; 63
+ 1a4:	0f 92       	push	r0
+ 1a6:	11 24       	eor	r1, r1
+	// do nothing 
+}
+ 1a8:	0f 90       	pop	r0
+ 1aa:	0f be       	out	0x3f, r0	; 63
+ 1ac:	0f 90       	pop	r0
+ 1ae:	1f 90       	pop	r1
+ 1b0:	18 95       	reti
 
 Disassembly of section .text.__dummy_fini:
 
-00000130 <_fini>:
- 130:	08 95       	ret
+000001c2 <_fini>:
+ 1c2:	08 95       	ret
 
 Disassembly of section .text.__dummy_funcs_on_exit:
 
-00000132 <__funcs_on_exit>:
- 132:	08 95       	ret
+000001c4 <__funcs_on_exit>:
+ 1c4:	08 95       	ret
 
 Disassembly of section .text.__dummy_simulator_exit:
 
-00000134 <__simulator_exit>:
- 134:	08 95       	ret
+000001c6 <__simulator_exit>:
+ 1c6:	08 95       	ret
 
 Disassembly of section .text.exit:
 
-000000fc <exit>:
-  fc:	ec 01       	movw	r28, r24
-  fe:	0e 94 99 00 	call	0x132	; 0x132 <__funcs_on_exit>
- 102:	0e 94 98 00 	call	0x130	; 0x130 <_fini>
- 106:	ce 01       	movw	r24, r28
- 108:	0e 94 9a 00 	call	0x134	; 0x134 <__simulator_exit>
- 10c:	ce 01       	movw	r24, r28
- 10e:	0e 94 95 00 	call	0x12a	; 0x12a <_Exit>
+00000174 <exit>:
+ 174:	ec 01       	movw	r28, r24
+ 176:	0e 94 e2 00 	call	0x1c4	; 0x1c4 <__funcs_on_exit>
+ 17a:	0e 94 e1 00 	call	0x1c2	; 0x1c2 <_fini>
+ 17e:	ce 01       	movw	r24, r28
+ 180:	0e 94 e3 00 	call	0x1c6	; 0x1c6 <__simulator_exit>
+ 184:	ce 01       	movw	r24, r28
+ 186:	0e 94 df 00 	call	0x1be	; 0x1be <_Exit>
 
 Disassembly of section .text._Exit:
 
-0000012a <_Exit>:
- 12a:	0e 94 55 00 	call	0xaa	; 0xaa <_exit>
+000001be <_Exit>:
+ 1be:	0e 94 55 00 	call	0xaa	; 0xaa <_exit>

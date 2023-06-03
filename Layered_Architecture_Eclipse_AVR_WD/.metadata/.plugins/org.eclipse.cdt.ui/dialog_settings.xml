@@ -5,4 +5,10 @@
 	</section>
 	<section name="completion_proposal_size">
 	</section>
+	<section name="org.eclipse.cdt.internal.ui.includebrowser.IBViewPart">
+		<item value="false" key="showFolders"/>
+		<item value="true" key="systemFilter"/>
+		<item value="false" key="includedBy"/>
+		<item value="true" key="inactiveFilter"/>
+	</section>
 </section>
