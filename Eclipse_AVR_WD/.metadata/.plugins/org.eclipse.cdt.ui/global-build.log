@@ -311,3 +311,88 @@ Data:         36 bytes (1.8% Full)
 
 Finished building: sizedummy
  
+13:30:10 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10260 bytes (31.3% Full)
+(.text + .data + .bootloader)
+
+Data:         36 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:30:16 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10260 bytes (31.3% Full)
+(.text + .data + .bootloader)
+
+Data:         36 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:30:32 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10260 bytes (31.3% Full)
+(.text + .data + .bootloader)
+
+Data:         36 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:30:35 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10260 bytes (31.3% Full)
+(.text + .data + .bootloader)
+
+Data:         36 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:37:32 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10260 bytes (31.3% Full)
+(.text + .data + .bootloader)
+
+Data:         36 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

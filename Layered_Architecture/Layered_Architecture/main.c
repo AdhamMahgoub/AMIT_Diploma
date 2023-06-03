@@ -11,6 +11,8 @@
 int main(void)
 {
 	
+	volatile int x = 3; 	
+	
 	DDRA_REG = 0x00; //Input
 	PORTA_REG = 0x01; //Activate Pull Up Resistor
 
