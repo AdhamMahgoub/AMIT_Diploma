@@ -7,21 +7,15 @@
 #include "MCAL/DIO/DIO_interface.h"
 #include "MCAL/DIO/DIO_private.h"
 
+#ifdef F_CPU
+#undef F_CPU
+#define F_CPU 8000000
+#endif
 
 int main(void)
 {
 
-	DDRA_REG = 0x00; //Input
-	PORTA_REG = 0x01; //Activate Pull Up Resistor
+	UART_Init();
+	UART_send_string("Hello");
 
-	DIO_voidSetPinDirection(PORTB,PIN0,OUTPUT);
-
-	while(1)
-    {
-		if (GET_BIT(PINA_REG,0) == 0) // pressed
-			DIO_voidSetPinValue(PORTB,PIN0,HIGH);
-
-		else
-			DIO_voidSetPinValue(PORTB,PIN0,LOW);
-	}
 }
