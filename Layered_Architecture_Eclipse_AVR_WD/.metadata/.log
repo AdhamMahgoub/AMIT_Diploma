@@ -472,3 +472,25 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
 	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
 	... 9 more
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-06-04 08:22:39.371
+!MESSAGE No repository found at jar:file:/C:/Users/adham/Downloads/aiXcoder_3.0.10.jar!/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-06-04 08:22:39.426
+!MESSAGE No repository found at jar:file:/C:/Users/adham/Downloads/de.innot.avreclipse.p2repository-2.4.2.zip!/.
+
+!ENTRY org.eclipse.core.jobs 4 2 2023-06-04 10:14:25.382
+!MESSAGE An internal error occurred during: "AVR Device Explorer".
+!STACK 0
+java.lang.NullPointerException
+	at de.innot.avreclipse.core.util.AVRMCUidConverter.name2id(AVRMCUidConverter.java:78)
+	at de.innot.avreclipse.ui.views.avrdevice.AVRDeviceView$WorkbenchSelectionListener$1.run(AVRDeviceView.java:660)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2023-06-04 10:14:25.392
+!MESSAGE An internal error occurred during: "AVR MCU List".
+!STACK 0
+java.lang.NullPointerException
+	at de.innot.avreclipse.core.util.AVRMCUidConverter.name2id(AVRMCUidConverter.java:78)
+	at de.innot.avreclipse.ui.views.supportedmcu.MCUListView$WorkbenchSelectionListener$1.run(MCUListView.java:214)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

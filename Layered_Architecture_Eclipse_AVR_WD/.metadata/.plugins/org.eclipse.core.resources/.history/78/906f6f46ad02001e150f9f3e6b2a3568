@@ -1,0 +1,50 @@
+#ifndef TIMER_CONFIG_H_
+#define TIMER_CONFIG_H_
+
+/*			Timer Modes					*/
+#define NORMAL							0
+#define CTC								1
+#define FAST_PWM						2
+#define PHASE_CORRECT					3
+
+/*			Timer CLK Select			*/
+#define falling_edge					0
+#define rising_edge						1
+#define no_prescalar 					2
+#define prescalar_8						3
+#define prescalar_64					4
+#define prescalar_256					5
+#define	prescalar_1024					6
+
+/*			Compare Output Mode			*/
+#define OC0_DISCONNECTED				0
+#define TOGGLE_OC0						1
+#define CLEAR_OC0						2
+#define SET_OC0							3
+
+
+
+
+
+
+
+
+
+/*		User chooses from here		*/									/*		Possible Options 			*/
+#define TIMER0_MODE						Fast_PWM						//	NORMAL, PWM, PHASE_CORRECT, CTC, FAST_PWM
+#define Compare_Output_Mode_non_pwm		not_used						//	not used (using pwm "fast or phase"), disconnected, toggle, clear, set
+#define Compare_Output_Mode_fast_pwm	Set_Oc0_fast_pwm				//	not used (using non-pwm or phase pwm), disconnected, toggle, clear, set
+#define Timer_clock_select				prescalar_1024					//	falling_edge, rising_edge, prescalar 
+#define Duty_cycle						0.25
+/*		End of user configuration	*/
+
+
+
+
+
+
+
+
+
+
+#endif

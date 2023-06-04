@@ -1,15 +1,13 @@
 #ifndef				TIMER_PRIVATE_H
 #define 			TIMER_PRIVATE_H
 
+#define 			TCCR0				*(volatile u8*) 0x53
+#define 			TCNT0				*(volatile u8*) 0x52
+#define 			OCR0				*(volatile u8*) 0x5C
+#define 			TIMSK				*(volatile u8*) 0x59
+#define 			TIFR				*(volatile u8*) 0x58
 
-#define 			TCCR0				*((volatile u8 *)0x53)  
-#define 			TCNT0				*((volatile u8 *)0x52)
-#define 			OCR0				*((volatile u8 *)0x5C)			//not used 
-#define 			TIMSK				*((volatile u8 *)0x59)
-#define 			TIFR				*((volatile u8 *)0x58)
-
-
-/*		Bits in TCCR0		*/
+/*					Bits in TCCR0		*/
 #define 			BIT_CS00			0
 #define 			BIT_CS01			1
 #define 			BIT_CS02			2
@@ -19,13 +17,11 @@
 #define 			BIT_WGM00			6
 #define 			BIT_FOC0			7
 
-
-/*		Bits in TIMSK		*/
+/*					Bits in TIMSK		*/
 #define 			BIT_TOIE0			0
 
-/*		Bits in TIFR		*/
+/*					Bits in TIFR		*/
 #define 			BIT_TOV0			0
-
 
 
 #endif 
