@@ -54,7 +54,7 @@ int main(void)
 	/*	Call Back	*/
 	EXTI1_SetCallBack_ptr2func(EXTI1_fun);
 
-	/*	EXTI1 Init							*/
+	/*	EXTI0 Init							*/
 	EXTI1_voidInit();
 
 	/*	Enable EXTI0						*/
@@ -67,8 +67,7 @@ int main(void)
 	DIO_voidSetPinDirection(PORTA, PIN0, OUTPUT);
 
 
-	SET_BIT(*(char*)0x3A,PIN7); // Enable Interrupt Flag Manually (for debugging)
-	SET_BIT(*(char*)0x3A,PIN6); // Enable Interrupt Flag Manually (for debugging)
+	SET_BIT(*(char*)0x5A,PIN7); // Enable Interrupt Flag Manually (for debugging)
 
 
 	volatile int x;

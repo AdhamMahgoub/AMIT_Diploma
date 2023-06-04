@@ -927,3 +927,266 @@ Data:         38 bytes (1.9% Full)
 
 Finished building: sizedummy
  
+07:29:36 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10812 bytes (33.0% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (1.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+07:35:35 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:67:32: error: macro "SET_BIT" passed 3 arguments, but takes just 2
+../main.c: In function 'main':
+../main.c:67: error: 'SET_BIT' undeclared (first use in this function)
+../main.c:67: error: (Each undeclared identifier is reported only once
+../main.c:67: error: for each function it appears in.)
+make: *** [main.o] Error 1
+07:36:07 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:67: error: lvalue required as left operand of assignment
+make: *** [main.o] Error 1
+07:36:42 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10826 bytes (33.0% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (1.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+07:38:52 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10838 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (1.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+07:42:32 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10850 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         40 bytes (2.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+07:44:42 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10850 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:         40 bytes (2.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+08:01:09 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10864 bytes (33.2% Full)
+(.text + .data + .bootloader)
+
+Data:         40 bytes (2.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+08:03:20 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10864 bytes (33.2% Full)
+(.text + .data + .bootloader)
+
+Data:         40 bytes (2.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+08:07:09 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10864 bytes (33.2% Full)
+(.text + .data + .bootloader)
+
+Data:         40 bytes (2.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

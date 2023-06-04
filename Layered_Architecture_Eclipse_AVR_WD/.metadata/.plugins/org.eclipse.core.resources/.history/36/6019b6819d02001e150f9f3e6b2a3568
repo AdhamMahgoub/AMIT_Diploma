@@ -67,8 +67,8 @@ int main(void)
 	DIO_voidSetPinDirection(PORTA, PIN0, OUTPUT);
 
 
-	SET_BIT(*(char*)0x3A,PIN7); // Enable Interrupt Flag Manually (for debugging)
-	SET_BIT(*(char*)0x3A,PIN6); // Enable Interrupt Flag Manually (for debugging)
+	SET_BIT(*(char*)0x5A,PIN7); // Enable Interrupt Flag Manually (for debugging)
+	SET_BIT(*(char*)0x5A,PIN6); // Enable Interrupt Flag Manually (for debugging)
 
 
 	volatile int x;
