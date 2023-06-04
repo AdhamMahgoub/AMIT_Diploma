@@ -72,7 +72,7 @@ void __vector_1	(void)
 
 
 
-/*		#####		EXTI1		#####		*/
+/*		#####		EXTI0		#####		*/
 /*		Global Pointer to Function (EXTI0_CallBack)		*/
 static void (*EXTI1_CallBack_ptr2func) (void) = NULL;
 
@@ -106,8 +106,8 @@ void EXTI1_voidInit(void)
 #endif
 
 
-	//CLR_BIT(GICR,7);	/*	Disable interrupt 0	-- Optional		*/
-	//SET_BIT(GIFR,7);	/*	Clear INT1 flag (INTF1)	-- Optional */
+	//CLR_BIT(GICR,6);	/*	Disable interrupt 0	-- Optional		*/
+	//SET_BIT(GIFR,6);	/*	Clear INT0 flag (INTF0)	-- Optional */
 }
 
 void EXTI1_SetCallBack_ptr2func(void(*pf)(void))
