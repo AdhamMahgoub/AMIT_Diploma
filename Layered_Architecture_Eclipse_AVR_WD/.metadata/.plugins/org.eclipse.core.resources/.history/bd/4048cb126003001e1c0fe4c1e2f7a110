@@ -1,0 +1,66 @@
+#include "LIB/STD_TYPES.h"
+#include "LIB/BIT_MATH.h"
+
+#include "MCAL/Timer/Timer_interface.h"
+#include "MCAL/Timer/Timer_private.h"
+#include "MCAL/Communication/UART/UART_interface.h"
+#include "MCAL/DIO/DIO_interface.h"
+
+
+#ifdef F_CPU
+#undef F_CPU
+#define F_CPU 8000000
+#endif
+
+
+int main(void)
+{
+
+
+	Timer0_Counter_Init();
+	UART_Init();
+	DIO_voidSetPinDirection(PORTB, PIN3, OUTPUT); // OC0 pin
+
+
+	char received = '9';
+	while(1)
+	{
+		//TODO:: Please write your application code
+		received = UART_RecieveByte();
+						if (received == '0')
+						{
+							UART_send_string("\n\nNormal Mode Activated\n");
+#undef TIMER_MODE
+#define TIMER_MODE NORMAL
+							Timer0_Counter_Init();
+						}
+
+						else if (received == '1')
+						{
+							UART_send_string("\n\nCTC Mode Activated\n");
+#undef TIMER_MODE
+#define TIMER_MODE CTC
+							Timer0_Counter_Init();
+
+						}
+
+						else if (received == '2')
+						{
+							UART_send_string("\n\nFast_PWM Mode Activated\n");
+#undef TIMER_MODE
+#define TIMER_MODE FAST_PWM
+							Timer0_Counter_Init();
+
+						}
+
+						else if (received == '3')
+						{
+							UART_send_string("\n\nPhase Correct Mode Activated\n");
+#undef TIMER_MODE
+#define TIMER_MODE PHASE_CORRECT
+							Timer0_Counter_Init();
+						}
+
+
+	}
+}

@@ -43,6 +43,7 @@ u8 UART_RecieveByte (void)
 	//Wait until the receive is complete  
 	while (	GET_BIT(UCSRA,RXC_bit) == 0);	/* Wait till data is received (to the UDR)	*/
 	//Return the received data 
+	char data_received_UART = UDR; // Just for Debugging // Can delete later
 	return(UDR);							/* Return the byte (3ashan el Data fel UDR)  */
 }
 

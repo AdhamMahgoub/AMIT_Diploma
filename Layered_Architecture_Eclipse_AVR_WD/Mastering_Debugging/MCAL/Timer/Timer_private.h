@@ -18,7 +18,8 @@
 #define 			BIT_FOC0			7
 
 /*					Bits in TIMSK		*/
-#define 			BIT_TOIE0			0
+#define 			BIT_TOIE0			0		//	Timer/Counter0 Overflow Interrupt Enable
+#define 			BIT_OCIE0			1		//	Timer/Counter0 Output Compare Match Interrupt Enable
 
 /*					Bits in TIFR		*/
 #define 			BIT_TOV0			0

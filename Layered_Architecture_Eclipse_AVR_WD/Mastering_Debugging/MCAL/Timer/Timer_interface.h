@@ -3,7 +3,7 @@
 
 #include "Timer_config.h"
 
-void Timer_Counter_Init(void);
+void Timer0_Counter_Init(void);
 
 
 void __vector_4 (void)		__attribute__((signal,	used)); // Timer ISR // Timer/Counter2 Compare Match

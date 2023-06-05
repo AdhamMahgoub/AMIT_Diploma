@@ -9,136 +9,261 @@
 
 #include <avr/interrupt.h>		//	Built-in Interrupt Library
 
-u32 ISR_Counter	= 0;
-u32 time_counter = 0;
-
+/*
 ISR (TIMER0_OVF_vect)				
 {
 	// Action when TIMER0 Overflow Occur
-	// do nothing 
+	// We can use the timer as (counter || timer)
+
+	if (COUNTER_or_TIMER == TIMER)
+	{
+		// Do the Following
+		// ISR Code
+	}
+
+	if (COUNTER_or_TIMER == COUNTER)
+	{
+		// Set TCNT0 to 254 when ISR occur
+		// Counts Twice then achieves ISR again
+		// Make sure that the following is chosen: (easiest to work with)
+		// TIMER_MODE == NORMAL
+		// TIMER_CLK_SELECT is falling_edge or rising_edge (of a push button on T0 pin)
+		TCNT0 = 254; // Assuming TIMER_MODE == NORMAL // if CTC, we need to adjust value
+	}
 }
+ */
 
 void Timer0_Counter_Init(void)
 {
+	/*	Steps
+	 * 		Global Interrupt Enable
+	 * 		Set Timer Initial Value
+	 * 		Configure Timer Mode
+	 * 		Configure Compare Match
+	 * 		Enable Overflow Interrupt
+	 */
+
 	// Set global interrupt enable bit
 	SET_BIT(SREG,7);
 
-	OCR0 = Duty_cycle * 256;
+	// Timer Initial Value
+	//OCR0 = Duty_cycle * 256;
 
 
 
-	/* ##########Configure the timer modes (Normal, PWM, ...)########## */
+
+
+	/* #################Configure the timer modes (Normal, PWM, ...)################# */
+	/*	Options
+	 * 		NORMAL
+	 * 		CTC
+	 * 		FAST_PWM
+	 * 		PHASE_CORRECT
+	 */
 
 	/*		Normal Mode 	*/
-#if TIMER_MODE == NORMAL
+	if (TIMER_MODE == NORMAL)
 	{
+		/*	Select Normal Mode	*/
 		CLR_BIT(TCCR0,WGM00);
 		CLR_BIT(TCCR0,WGM01);
+
+
+		/* #################Configure the Compare Match################# */
+		/*	Options
+		 * 		OC0_DISCONNECTED
+		 * 		TOGGLE_OC0
+		 * 		CLEAR_OC0
+		 * 		SET_OC0
+		 */
+
+		/*		0C0 Disconnected 	*/
+		if (NORMAL_COMPARE_OUTPUT_MODE == OC0_DISCONNECTED)
+		{
+			CLR_BIT(TCCR0,COM00);
+			CLR_BIT(TCCR0,COM01);
+		}
+
+		/*		Toggle_OC0 			*/
+		else if (NORMAL_COMPARE_OUTPUT_MODE == TOGGLE_OC0 && (TIMER_MODE == NORMAL || TIMER_MODE == CTC) )	// Toggle is in NON-PWM modes only
+		{
+			SET_BIT(TCCR0,COM00);
+			CLR_BIT(TCCR0,COM01);
+		}
+
+		/*		Clear_OC0		 	*/
+		else if (NORMAL_COMPARE_OUTPUT_MODE == CLEAR_OC0)
+		{
+			CLR_BIT(TCCR0,COM00);
+			SET_BIT(TCCR0,COM01);
+		}
+
+		/*		Set 0C0  			*/
+		else if (NORMAL_COMPARE_OUTPUT_MODE == SET_OC0)
+		{
+			SET_BIT(TCCR0,COM00);
+			SET_BIT(TCCR0,COM01);
+		}
 	}
-#endif
 
 	/*		CTC	Mode		*/
-#if (TIMER_MODE == CTC)
+	else if (TIMER_MODE == CTC)
 	{
+		/*	Select CTC Mode	*/
 		CLR_BIT(TCCR0,WGM00);
 		SET_BIT(TCCR0,WGM01);
+
+
+
+		/* #################Configure the Compare Match################# */
+		/*	Options
+		 * 		OC0_DISCONNECTED
+		 * 		TOGGLE_OC0
+		 * 		CLEAR_OC0
+		 * 		SET_OC0
+		 */
+
+		/*		0C0 Disconnected 	*/
+		if (CTC_COMPARE_OUTPUT_MODE == OC0_DISCONNECTED)
+		{
+			CLR_BIT(TCCR0,COM00);
+			CLR_BIT(TCCR0,COM01);
+		}
+
+		/*		Toggle_OC0 			*/
+		else if (CTC_COMPARE_OUTPUT_MODE == TOGGLE_OC0 && (TIMER_MODE == NORMAL || TIMER_MODE == CTC) )	// Toggle is in NON-PWM modes only
+		{
+			SET_BIT(TCCR0,COM00);
+			CLR_BIT(TCCR0,COM01);
+		}
+
+		/*		Clear_OC0		 	*/
+		else if (CTC_COMPARE_OUTPUT_MODE == CLEAR_OC0)
+		{
+			CLR_BIT(TCCR0,COM00);
+			SET_BIT(TCCR0,COM01);
+		}
+
+		/*		Set 0C0  			*/
+		else if (CTC_COMPARE_OUTPUT_MODE == SET_OC0)
+		{
+			SET_BIT(TCCR0,COM00);
+			SET_BIT(TCCR0,COM01);
+		}
+
+
+		/*	Adjust Compare Match	*/
+		OCR0 = CTC_OCR0_Value;
 	}
-#endif
 
 	/*		Fast PWM		*/
-#if (TIMER_MODE == FAST_PWM)
+	else if (TIMER_MODE == FAST_PWM)
 	{
+		/*	Select FAST PWM Mode	*/
 		SET_BIT(TCCR0,WGM00);
 		SET_BIT(TCCR0,WGM01);
+
+		/* #################Configure the Compare Match################# */
+		/*	Options
+		 * 		OC0_DISCONNECTED
+		 * 		CLEAR_OC0
+		 * 		SET_OC0
+		 */
+
+		/*		0C0 Disconnected 	*/
+		if (FAST_PWM_COMPARE_OUTPUT_MODE == OC0_DISCONNECTED)
+		{
+			CLR_BIT(TCCR0,COM00);
+			CLR_BIT(TCCR0,COM01);
+		}
+
+
+		/*		Clear_OC0		 	*/
+		else if (FAST_PWM_COMPARE_OUTPUT_MODE == CLEAR_OC0)
+		{
+			CLR_BIT(TCCR0,COM00);
+			SET_BIT(TCCR0,COM01);
+		}
+
+		/*		Set 0C0  			*/
+		else if (FAST_PWM_COMPARE_OUTPUT_MODE == SET_OC0)
+		{
+			SET_BIT(TCCR0,COM00);
+			SET_BIT(TCCR0,COM01);
+		}
+
+
+
+		OCR0 = FAST_PWM_OCR0_Value;
 	}
-#endif
 
 	/*		Phase_Correct	*/
-#if (TIMER_MODE == PHASE_CORRECT)
+	else if  (TIMER_MODE == PHASE_CORRECT)
 	{
+		/*	Select Phase Correct Mode	*/
 		SET_BIT(TCCR0,WGM00);
 		CLR_BIT(TCCR0,WGM01);
+
+
+		/* #################Configure the Compare Match################# */
+		/*	Options
+		 * 		OC0_DISCONNECTED
+		 * 		CLEAR_OC0
+		 * 		SET_OC0
+		 */
+
+		/*		0C0 Disconnected 	*/
+		if (PHASE_CORRECT_COMPARE_OUTPUT_MODE == OC0_DISCONNECTED)
+		{
+			CLR_BIT(TCCR0,COM00);
+			CLR_BIT(TCCR0,COM01);
+		}
+
+
+		/*		Clear_OC0		 	*/
+		else if (PHASE_CORRECT_COMPARE_OUTPUT_MODE == CLEAR_OC0)
+		{
+			CLR_BIT(TCCR0,COM00);
+			SET_BIT(TCCR0,COM01);
+		}
+
+		/*		Set 0C0  			*/
+		else if (PHASE_CORRECT_COMPARE_OUTPUT_MODE == SET_OC0)
+		{
+			SET_BIT(TCCR0,COM00);
+			SET_BIT(TCCR0,COM01);
+		}
+
+
+		OCR0 = PHASE_CORRECT_OCR0_Value;
+
+
 	}
-#endif
 
 
-	/* ##########Configure the Compare Match########## */
 
-	// Configure the Compare Match (Non-PWM)
-#if TIMER_MODE == NORMAL || TIMER_MODE == CTC
 
+
+
+
+
+
+
+
+
+
+
+	/* #################Configure the CLK Select################# */
 	/*	Options
-	 * 		OC0_DISCONNECTED
-	 * 		TOGGLE_OC0 (for NON-PWM only)
-	 * 		CLEAR_OC0
-	 * 		SET_OC0
+	 * 		FALLING_EDGE
+	 * 		RISING_EDGE
+	 * 		NO_PRESCALER
+	 * 		PRESCALER_8
+	 * 		PRESCALER_64
+	 * 		PRESCALER_256
+	 * 		PRESCALER_1024
 	 */
 
-	/*		0C0 Disconnected 	*/
-	if (COMPARE_OUTPUT_MODE == OC0_DISCONNECTED)
-	{
-		CLR_BIT(TCCR0,COM00);
-		CLR_BIT(TCCR0,COM01);
-	}
-
-	/*		Toggle_OC0 			*/
-	else if (COMPARE_OUTPUT_MODE == TOGGLE_OC0)
-	{
-		SET_BIT(TCCR0,COM00);
-		CLR_BIT(TCCR0,COM01);
-	}
-
-	/*		Clear_OC0		 	*/
-	else if (COMPARE_OUTPUT_MODE == CLEAR_OC0)
-	{
-		CLR_BIT(TCCR0,COM00);
-		SET_BIT(TCCR0,COM01);
-	}
-
-	/*		Set 0C0  			*/
-	else if (COMPARE_OUTPUT_MODE == SET_OC0)
-	{
-		SET_BIT(TCCR0,COM00);
-		SET_BIT(TCCR0,COM01);
-	}
-#endif
-
-
-#if TIMER_MODE == FAST_PWM || TIMER_MODE == PHASE_CORRECT
-
-	//configure the compare match (PWM)
-	/*	Options
-	 * 		OC0_DISCONNECTED
-	 * 		CLEAR_OC0
-	 * 		SET_OC0
-	 */
-
-	/*		0C0 Disconnected 			*/
-	else if (COMPARE_OUTPUT_MODE == OC0_DISCONNECTED)
-	{
-		CLR_BIT(TCCR0,COM00);
-		CLR_BIT(TCCR0,COM01);
-	}
-
-	/*		Clear_OC0		 	*/
-	else if (COMPARE_OUTPUT_MODE == CLEAR_OC0)
-	{
-		CLR_BIT(TCCR0,COM00);
-		SET_BIT(TCCR0,COM01);
-	}
-
-	/*		Set 0C0  			*/
-	else if (COMPARE_OUTPUT_MODE == SET_OC0)
-	{
-		SET_BIT(TCCR0,COM00);
-		SET_BIT(TCCR0,COM01);
-	}
-#endif
-
-
-	/* ##########Configure the CLK Select########## */
-
-	// Configure the CLK Select 		*/
 	/*	Falling Edge			*/
 	if (TIMER_CLK_SELECT == FALLING_EDGE)
 	{
@@ -194,6 +319,15 @@ void Timer0_Counter_Init(void)
 		CLR_BIT(TCCR0,CS01);
 		SET_BIT(TCCR0,CS02);
 	}
+
+
+
+
+
+
+
+
+
 
 	//enable overflow interrupt
 	SET_BIT(TIMSK,BIT_TOIE0);
