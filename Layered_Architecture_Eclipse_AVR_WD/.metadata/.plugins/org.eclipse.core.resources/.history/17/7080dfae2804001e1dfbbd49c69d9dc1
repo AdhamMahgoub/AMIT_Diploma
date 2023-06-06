@@ -5,7 +5,6 @@
 #include "MCAL/Timer/Timer_private.h"
 #include "MCAL/Communication/UART/UART_interface.h"
 #include "MCAL/DIO/DIO_interface.h"
-#include <util/delay.h>
 
 
 #ifdef F_CPU
@@ -26,8 +25,8 @@ int main(void)
 
 	while(1)
 	{
-		_delay_ms(1000);
 		UART_SendByte('1');
-		_delay_ms(1000);
+		UART_RecieveByte();
+		//TODO:: Please write your application code
 	}
 }

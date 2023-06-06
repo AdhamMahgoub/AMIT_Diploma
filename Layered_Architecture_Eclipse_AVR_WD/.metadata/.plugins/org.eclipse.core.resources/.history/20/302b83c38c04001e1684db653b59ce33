@@ -26,7 +26,7 @@ void UART_Init (void)
 	
 	//Setting the baud rate to 9600
 	UBRRH = 0; 
-	UBRRL = 207;							//	Filling the low byte (8 bits only) -- this means 9600 (from table)
+	UBRRL = 103;							//	Filling the low byte (8 bits only) -- this means 9600 (from table)
 }
 
 void UART_SendByte (u8 Byte)
