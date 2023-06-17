@@ -1,791 +1,80 @@
-21:13:19 **** Clean-only build of configuration Debug for project Professional_Embedded_Systems ****
+10:29:44 **** Clean-only build of configuration Debug for project Mastering_Debugging ****
 make clean 
-rm -rf  ./src/main.o  ./src/main.d  Professional_Embedded_Systems.exe
-rm: cannot remove `Professional_Embedded_Systems.exe': Permission denied
-make: [clean] Error 1 (ignored)
+rm -rf  Mastering_Debugging.hex  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o  sizedummy  Mastering_Debugging.lss  ./MCAL/Timer/Timer_prog.d  ./MCAL/EXTI/EXTI_program.d  ./MCAL/DIO/DIO_program.d  ./MCAL/Communication/UART/UART_prog.d  ./MCAL/Communication/SPI/SPI_prog.d  ./HAL/LCD/LCD_program.d  ./HAL/Keypad/keypad_program.d  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.d  ./main.d  Mastering_Debugging.elf
  
-21:13:21 **** Build of configuration Debug for project Professional_Embedded_Systems ****
+10:29:46 **** Build of configuration Debug for project Mastering_Debugging ****
 make all 
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
+Building file: ../MCAL/Timer/Timer_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Timer/Timer_prog.d" -MT"MCAL/Timer/Timer_prog.o" -c -o "MCAL/Timer/Timer_prog.o" "../MCAL/Timer/Timer_prog.c"
+Finished building: ../MCAL/Timer/Timer_prog.c
  
-Building target: Professional_Embedded_Systems.exe
-Invoking: MinGW C Linker
-Adham: Generate Precompiler file.i
-gcc -E ../src/main.c -o ./main.i
-Adham: Generate Assembly file.s
-gcc -S ../src/main.c -o ./main.s
-gcc  -o "Professional_Embedded_Systems.exe"  ./src/main.o   
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file Professional_Embedded_Systems.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-make: *** [Professional_Embedded_Systems.exe] Error 1
-21:14:44 **** Incremental Build of configuration Debug for project Professional_Embedded_Systems ****
-make all 
-Building target: Professional_Embedded_Systems.exe
-Invoking: MinGW C Linker
-Adham: Generate Precompiler file.i
-gcc -E ../src/main.c -o ./main.i
-Adham: Generate Assembly file.s
-gcc -S ../src/main.c -o ./main.s
-gcc  -o "Professional_Embedded_Systems.exe"  ./src/main.o   
-Finished building target: Professional_Embedded_Systems.exe
+Building file: ../MCAL/EXTI/EXTI_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/EXTI/EXTI_program.d" -MT"MCAL/EXTI/EXTI_program.o" -c -o "MCAL/EXTI/EXTI_program.o" "../MCAL/EXTI/EXTI_program.c"
+Finished building: ../MCAL/EXTI/EXTI_program.c
  
-21:14:48 **** Incremental Build of configuration Debug for project Professional_Embedded_Systems ****
-make all 
-make: Nothing to be done for `all'.
-21:16:26 **** Incremental Build of configuration Debug for project Professional_Embedded_Systems ****
-make all 
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:17:2: error: expected ':', ',', ';', '}' or '__attribute__' before '{' token
-  {
-  ^
-make: *** [src/main.o] Error 1
-21:16:31 **** Incremental Build of configuration Debug for project Professional_Embedded_Systems ****
-make all 
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:17:2: error: expected ':', ',', ';', '}' or '__attribute__' before '{' token
-  {
-  ^
-make: *** [src/main.o] Error 1
-21:18:57 **** Incremental Build of configuration Debug for project Professional_Embedded_Systems ****
-make all 
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:24:1: error: expected ';', identifier or '(' before 'int'
- int main()
- ^~~
-make: *** [src/main.o] Error 1
-21:19:01 **** Incremental Build of configuration Debug for project Professional_Embedded_Systems ****
-make all 
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
+Building file: ../MCAL/DIO/DIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/DIO/DIO_program.d" -MT"MCAL/DIO/DIO_program.o" -c -o "MCAL/DIO/DIO_program.o" "../MCAL/DIO/DIO_program.c"
+Finished building: ../MCAL/DIO/DIO_program.c
  
-Building target: Professional_Embedded_Systems.exe
-Invoking: MinGW C Linker
-Adham: Generate Precompiler file.i
-gcc -E ../src/main.c -o ./main.i
-Adham: Generate Assembly file.s
-gcc -S ../src/main.c -o ./main.s
-gcc  -o "Professional_Embedded_Systems.exe"  ./src/main.o   
-Finished building target: Professional_Embedded_Systems.exe
- 
-21:19:15 **** Incremental Build of configuration Debug for project Professional_Embedded_Systems ****
-make all 
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: Professional_Embedded_Systems.exe
-Invoking: MinGW C Linker
-Adham: Generate Precompiler file.i
-gcc -E ../src/main.c -o ./main.i
-Adham: Generate Assembly file.s
-gcc -S ../src/main.c -o ./main.s
-gcc  -o "Professional_Embedded_Systems.exe"  ./src/main.o   
-Finished building target: Professional_Embedded_Systems.exe
- 
-21:26:02 **** Incremental Build of configuration Debug for project Professional_Embedded_Systems ****
-make all 
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: Professional_Embedded_Systems.exe
-Invoking: MinGW C Linker
-Adham: Generate Precompiler file.i
-gcc -E ../src/main.c -o ./main.i
-Adham: Generate Assembly file.s
-gcc -S ../src/main.c -o ./main.s
-gcc  -o "Professional_Embedded_Systems.exe"  ./src/main.o   
-Finished building target: Professional_Embedded_Systems.exe
- 
-21:27:12 **** Incremental Build of configuration Debug for project Professional_Embedded_Systems ****
-make all 
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:2:15: fatal error: a.h: No such file or directory
- #include <a.h>
-               ^
-compilation terminated.
-make: *** [src/main.o] Error 1
-21:27:23 **** Incremental Build of configuration Debug for project Professional_Embedded_Systems ****
-make all 
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: Professional_Embedded_Systems.exe
-Invoking: MinGW C Linker
-Adham: Generate Precompiler file.i
-gcc -E ../src/main.c -o ./main.i
-Adham: Generate Assembly file.s
-gcc -S ../src/main.c -o ./main.s
-gcc  -o "Professional_Embedded_Systems.exe"  ./src/main.o   
-Finished building target: Professional_Embedded_Systems.exe
- 
-09:03:10 **** Build of configuration Debug for project Mastering_Debugging ****
-make all 
 Building file: ../MCAL/Communication/UART/UART_prog.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
-../MCAL/Communication/UART/UART_prog.c: In function 'UART_RecieveByte':
-../MCAL/Communication/UART/UART_prog.c:46: warning: unused variable 'data_received_UART'
 ../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
-../MCAL/Communication/UART/UART_prog.c:59: warning: implicit declaration of function 'sprintf'
-../MCAL/Communication/UART/UART_prog.c:59: warning: incompatible implicit declaration of built-in function 'sprintf'
-../MCAL/Communication/UART/UART_prog.c:59: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+../MCAL/Communication/UART/UART_prog.c:58: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:58: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:58: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
 Finished building: ../MCAL/Communication/UART/UART_prog.c
  
+Building file: ../MCAL/Communication/SPI/SPI_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/SPI/SPI_prog.d" -MT"MCAL/Communication/SPI/SPI_prog.o" -c -o "MCAL/Communication/SPI/SPI_prog.o" "../MCAL/Communication/SPI/SPI_prog.c"
+Finished building: ../MCAL/Communication/SPI/SPI_prog.c
+ 
+Building file: ../HAL/LCD/LCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"HAL/LCD/LCD_program.d" -MT"HAL/LCD/LCD_program.o" -c -o "HAL/LCD/LCD_program.o" "../HAL/LCD/LCD_program.c"
+In file included from ../HAL/LCD/LCD_program.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/LCD/LCD_program.c
+ 
+Building file: ../HAL/Keypad/keypad_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"HAL/Keypad/keypad_program.d" -MT"HAL/Keypad/keypad_program.o" -c -o "HAL/Keypad/keypad_program.o" "../HAL/Keypad/keypad_program.c"
+In file included from ../HAL/Keypad/keypad_program.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/Keypad/keypad_program.c
+ 
+Building file: ../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF".metadata/.plugins/org.eclipse.cdt.make.core/specs.d" -MT".metadata/.plugins/org.eclipse.cdt.make.core/specs.o" -c -o ".metadata/.plugins/org.eclipse.cdt.make.core/specs.o" "../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c"
+Finished building: ../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c
+ 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10888 bytes (33.2% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:04:01 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10648 bytes (32.5% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:05:46 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10668 bytes (32.6% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:08:36 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10888 bytes (33.2% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:10:34 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10888 bytes (33.2% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:10:48 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10888 bytes (33.2% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:11:11 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10888 bytes (33.2% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:11:26 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10888 bytes (33.2% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:24:14 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10900 bytes (33.3% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:24:23 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10662 bytes (32.5% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:24:54 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10662 bytes (32.5% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:25:29 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10888 bytes (33.2% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:31:27 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../main.c: In function 'main':
-../main.c:32: error: expected ';' before 'UART_SendByte'
+../main.c:17: error: expected identifier or '(' before 'volatile'
+../main.c:17: error: expected ')' before '(' token
 make: *** [main.o] Error 1
-09:31:33 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+10:31:02 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10662 bytes (32.5% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:32:13 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+../main.c:17: error: expected identifier or '(' before 'volatile'
+../main.c:17: error: expected ')' before numeric constant
+make: *** [main.o] Error 1
+10:32:04 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../main.c: In function 'main':
-../main.c:24: warning: unused variable 'data'
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10888 bytes (33.2% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:45:11 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10656 bytes (32.5% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:45:38 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10648 bytes (32.5% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:48:08 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10888 bytes (33.2% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:50:05 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
-make all 
-Building file: ../main.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-In file included from ../main.c:8:
-c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-Finished building: ../main.c
- 
-Building target: Mastering_Debugging.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
-Finished building target: Mastering_Debugging.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
-Finished building: Mastering_Debugging.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
-Finished building: Mastering_Debugging.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
-AVR Memory Usage
-----------------
-Device: atmega32
-
-Program:   10894 bytes (33.2% Full)
-(.text + .data + .bootloader)
-
-Data:         34 bytes (1.7% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-09:52:37 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+../main.c:17: error: expected identifier or '(' before 'volatile'
+../main.c:17: error: expected ')' before numeric constant
+make: *** [main.o] Error 1
+10:33:30 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
@@ -811,7 +100,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   10656 bytes (32.5% Full)
+Program:   10760 bytes (32.8% Full)
 (.text + .data + .bootloader)
 
 Data:         34 bytes (1.7% Full)
@@ -820,7 +109,42 @@ Data:         34 bytes (1.7% Full)
 
 Finished building: sizedummy
  
-09:56:10 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+10:34:28 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10760 bytes (32.8% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:36:50 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
 make all 
 Building file: ../MCAL/Communication/UART/UART_prog.c
 Invoking: AVR Compiler
@@ -831,6 +155,14 @@ avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections 
 ../MCAL/Communication/UART/UART_prog.c:58: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
 Finished building: ../MCAL/Communication/UART/UART_prog.c
  
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:7:49: warning: extra tokens at end of #include directive
+../main.c:7:51: warning: missing terminating " character
+../main.c:17:36: warning: extra tokens at end of #ifdef directive
+Finished building: ../main.c
+ 
 Building target: Mastering_Debugging.elf
 Invoking: AVR C Linker
 avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
@@ -850,7 +182,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   10644 bytes (32.5% Full)
+Program:   10760 bytes (32.8% Full)
 (.text + .data + .bootloader)
 
 Data:         34 bytes (1.7% Full)
@@ -859,7 +191,7 @@ Data:         34 bytes (1.7% Full)
 
 Finished building: sizedummy
  
-10:00:25 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+10:37:03 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
 make all 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
@@ -867,7 +199,383 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   10644 bytes (32.5% Full)
+Program:   10760 bytes (32.8% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:37:40 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10760 bytes (32.8% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:58:18 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:7:49: warning: extra tokens at end of #include directive
+../main.c:7:51: warning: missing terminating " character
+../main.c:17:36: warning: extra tokens at end of #ifdef directive
+../main.c: In function 'main':
+../main.c:35: warning: unused variable 'data'
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10754 bytes (32.8% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:58:30 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10754 bytes (32.8% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:17:49 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:61: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:61: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:61: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+Finished building: ../MCAL/Communication/UART/UART_prog.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10768 bytes (32.9% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:20:39 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:7:49: warning: extra tokens at end of #include directive
+../main.c:7:51: warning: missing terminating " character
+../main.c:17:36: warning: extra tokens at end of #ifdef directive
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10774 bytes (32.9% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:25:09 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:63: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:63: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:63: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+Finished building: ../MCAL/Communication/UART/UART_prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:7:49: warning: extra tokens at end of #include directive
+../main.c:7:51: warning: missing terminating " character
+../main.c:17:36: warning: extra tokens at end of #ifdef directive
+../main.c: In function 'main':
+../main.c:35: warning: unused variable 'data'
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10796 bytes (32.9% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:25:14 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10796 bytes (32.9% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:25:47 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10796 bytes (32.9% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:28:46 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:64: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+Finished building: ../MCAL/Communication/UART/UART_prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:7:49: warning: extra tokens at end of #include directive
+../main.c:7:51: warning: missing terminating " character
+../main.c:17:36: warning: extra tokens at end of #ifdef directive
+../main.c: In function 'main':
+../main.c:31: warning: unused variable 'data'
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10796 bytes (32.9% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:28:51 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10796 bytes (32.9% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:35:05 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:7:49: warning: extra tokens at end of #include directive
+../main.c:7:51: warning: missing terminating " character
+../main.c:17:36: warning: extra tokens at end of #ifdef directive
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10794 bytes (32.9% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:35:58 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:7:49: warning: extra tokens at end of #include directive
+../main.c:7:51: warning: missing terminating " character
+../main.c:17:36: warning: extra tokens at end of #ifdef directive
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10794 bytes (32.9% Full)
 (.text + .data + .bootloader)
 
 Data:         34 bytes (1.7% Full)

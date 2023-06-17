@@ -7,6 +7,12 @@
 
 void UART_Init (void)
 {
+	// Enable UART Interrupt
+	SET_BIT(SREG,7); // Enable Global  Interrupts -- Don't Forget
+	SET_BIT(UCSRB, UDRIE_bit);				// Needed when interrupt is used (instead of polling)
+	SET_BIT(UCSRB, TXCIE_bit);				// Needed when interrupt is used (instead of polling)
+	SET_BIT(UCSRB, RXCIE_bit);				// Needed when interrupt is used (instead of polling)
+
 	//Enable RX and TX 
 	SET_BIT(UCSRB,RXEN_bit);
 	SET_BIT(UCSRB,TXEN_bit);

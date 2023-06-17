@@ -8,11 +8,16 @@
 #define 		UCSRC			*((volatile u8 *)0x40)		 //they both have the same address
 #define 		UBRRH			*((volatile u8 *)0x40)		 //they both have the same address
 #define 		UBRRL			*((volatile u8 *)0x29)
-			 
-				 
+#define 		SREG			*((volatile u8 *)0x5F)  	 //used for General Interrupt Enable (GIE)
+
+
 /*			UCSRB Register		*/
 #define RXEN_bit	3	//Transmitter Enable 
 #define TXEN_bit	4	//Receiver Enable 	
+#define UDRIE_bit   5
+#define TXCIE_bit	6
+#define RXCIE_bit	7
+
 				
 /*			UCSRC Register		*/
 #define UCSZ0_bit	1
