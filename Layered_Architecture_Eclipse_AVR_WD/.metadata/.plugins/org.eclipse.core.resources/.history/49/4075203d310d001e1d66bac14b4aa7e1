@@ -18,7 +18,8 @@
 #include <avr/interrupt.h>
 ISR(USART_RXC_vect)	// Receive Complete -- UART Receive ISR
 {
-	// UART Receive ISR
+	DIO_voidSetPinDirection(PORTA,PIN0, OUTPUT);
+	DIO_voidSetPinValue(PORTA, PIN0, HIGH);
 }
 
 #endif
