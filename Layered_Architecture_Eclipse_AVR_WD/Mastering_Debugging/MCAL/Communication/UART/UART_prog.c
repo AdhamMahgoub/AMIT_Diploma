@@ -26,7 +26,7 @@ void UART_Init (void)
 	
 	//Setting the baud rate to 9600
 	UBRRH = 0; 
-	UBRRL = 207;							//	Filling the low byte (8 bits only) -- this means 9600 (from table)
+	UBRRL = 207;							//	Filling the low byte (8 bits only) -- this means 2400 (from table)
 }
 
 void UART_SendByte (u8 Byte)
@@ -43,7 +43,6 @@ u8 UART_RecieveByte (void)
 	//Wait until the receive is complete  
 	while (	GET_BIT(UCSRA,RXC_bit) == 0);	/* Wait till data is received (to the UDR)	*/
 	//Return the received data 
-	char data_received_UART = UDR; // Just for Debugging // Can delete later
 	return(UDR);							/* Return the byte (3ashan el Data fel UDR)  */
 }
 

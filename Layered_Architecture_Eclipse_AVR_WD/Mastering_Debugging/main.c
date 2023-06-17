@@ -5,7 +5,6 @@
 #include "MCAL/Timer/Timer_private.h"
 #include "MCAL/Communication/UART/UART_interface.h"
 #include "MCAL/DIO/DIO_interface.h"
-#include <util/delay.h>
 
 
 #ifdef F_CPU
@@ -14,20 +13,18 @@
 #endif
 
 
-char x = 0;
 
 int main(void)
 {
-	//Timer0_Counter_Init();
-	//DIO_voidSetPinDirection(PORTB, PIN3, OUTPUT); // OC0 pin
-
 
 	UART_Init();
-
+	char data;
 	while(1)
 	{
-		_delay_ms(1000);
-		UART_SendByte('1');
-		_delay_ms(1000);
+		data = UART_RecieveByte();
+		UART_SendByte(data);
+
+
+
 	}
 }

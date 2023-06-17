@@ -1,0 +1,81 @@
+#include <stdio.h>
+
+
+struct student
+{
+	struct student_name
+	{
+		char first_name[10];
+		char middle_name[10];
+		char last_name[10];
+	}S_student_name;
+
+
+	int registration_number;
+	char nationality[20];
+
+	struct student_ID
+	{
+		char type_of_ID;
+		int ID_number;
+		char ID_validity;
+	}S_student_ID;
+
+    struct home_address
+    {
+        char flat_number;
+        char house_number;
+        char street_name[20];
+        char area_district_name[10];
+        char city_name[15];
+        char governorate_name[15];
+        char country[10];
+        int postal_code;
+    }S_home_address;
+
+    struct mailing_address
+    {
+        int flat_number_mailing;
+        int house_number_mailing;
+        char street_name_mailing[20];
+        char area_district_name_mailing[10];
+        char city_name_mailing[15];
+        char governorate_name_mailing[15];
+        char country_mailing[10];
+        int postal_code_mailing;
+    }S_mailing_address;
+
+
+    struct age //part 7
+    {
+        int day;
+        int month;
+        int year;
+    }S_age;
+
+    char student_gender[10];
+
+    struct enrollment
+    {
+        int first_enrollment_term;
+        int first_enrollment_year;
+        char department_of_enrollment[20];
+    }S_enrollment;
+
+    struct tutor
+    {
+        char tutor_name[10];
+        int tutor_code;
+    }S_tutor;
+
+
+
+}students_array[100];	// 100 Students
+
+int main()
+{
+
+
+
+	return 0;
+}

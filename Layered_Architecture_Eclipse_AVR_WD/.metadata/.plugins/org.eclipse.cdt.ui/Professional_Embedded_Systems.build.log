@@ -1,0 +1,19 @@
+21:27:23 **** Incremental Build of configuration Debug for project Professional_Embedded_Systems ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: Professional_Embedded_Systems.exe
+Invoking: MinGW C Linker
+Adham: Generate Precompiler file.i
+gcc -E ../src/main.c -o ./main.i
+Adham: Generate Assembly file.s
+gcc -S ../src/main.c -o ./main.s
+gcc  -o "Professional_Embedded_Systems.exe"  ./src/main.o   
+Finished building target: Professional_Embedded_Systems.exe
+ 
+
+21:27:24 Build Finished (took 1s.227ms)
+

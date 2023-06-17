@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+
+struct student
+{
+	struct student_name
+	{
+		char first_name[10];
+		char middle_name[10];
+		char last_name[10];
+	}student_name1;
+
+
+	int registration_number;
+	char nationality[20];
+
+	struct student_ID
+	{
+		char type_of_ID[10];
+		int ID_number;
+	}student_ID1;
+}
+
+int main()
+{
+
+
+
+	return 0;
+}

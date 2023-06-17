@@ -1,0 +1,1384 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+int students_scanned = 0;
+
+struct student
+{
+	struct student_name
+	{
+		char first_name[10];
+		char middle_name[10];
+		char last_name[10];
+	};
+	struct student_name student_name1; //naming
+
+
+
+	int registration_number;
+	char nationality[20];
+
+
+
+	struct student_ID
+	{
+		char type_of_ID[10];
+		int ID_number;
+	};
+	struct student_ID ID; //naming
+
+
+	struct home_address
+	{
+		int flat_number;
+		int house_number;
+		char street_name[20];
+		char area_district_name[10];
+		char city_name[15];
+		char governorate_name[15];
+		char country[10];
+		int postal_code;
+	};
+	struct home_address home_address1; //naming
+
+
+	struct mailing_address
+	{
+		int flat_number_mailing;
+		int house_number_mailing;
+		char street_name_mailing[20];
+		char area_district_name_mailing[10];
+		char city_name_mailing[15];
+		char governorate_name_mailing[15];
+		char country_mailing[10];
+		int postal_code_mailing;
+	};
+	struct mailing_address mailing_address1; //naming
+
+
+	struct age //part 7
+	{
+		int day;
+		int month;
+		int year;
+	};
+	struct age age1; //naming
+
+
+	char student_gender[10];
+
+	struct enrollment
+	{
+		int first_enrollment_term;
+		int first_enrollment_year;
+		char department_of_enrollment[20];
+	};
+	struct enrollment enrollment1; //naming
+
+
+	char tutor_name[10];
+	int tutor_code;
+
+	int current_term;
+
+	struct payments
+	{
+		char type_of_funding[10];
+		int number_payments_done;
+		int total_amount_paid;
+
+
+		///////////////////////////////////
+		struct details_each_payment
+		{
+			int amount_paid;
+			int transaction_number;
+			char bank_of_transaction[10];
+
+			struct date_of_transaction
+			{
+				int day_transaction;
+				int month_transaction;
+				int year_transaction;
+			};
+			struct date_of_transaction date_of_transaction1; //naming
+
+
+		};
+		struct details_each_payment arr_details[50];   //naming //assuming 50 transactions  maximum//
+
+		//struct details_each_payment arr_details[100];   //100 transactions
+
+	};
+	struct payments payments1; //naming
+
+
+	struct contact
+	{
+		char email[20];
+		int home_phone_number;
+		long int mobile_number;
+	};
+	struct contact contact1; //naming
+
+
+	struct credit_hours
+	{
+		int max_required_for_degree;
+		int finished_ch;
+		int current_ch;
+		int remaining_ch;
+	};
+	struct credit_hours credit_hours1; //naming
+
+
+	struct GPA
+	{
+		float overall_gpa;
+		int number_of_semesters_finished;
+		float individual_semester_GPA[10];
+	};
+	struct GPA GPA1;
+
+	/*......................question 17.......................*/
+	//don't forget to name the new structs
+	//don't forget to scan the new data
+
+	struct courses
+	{
+
+		int number_courses_finished;
+		int number_courses_current;
+		int total_credit_hours_finished;
+		int total_credit_hours_current;
+
+
+		struct finished
+		{
+
+
+			struct finished_course_data
+			{
+				int course_code;
+				char course_name [10];
+				int course_credit_hours;
+				int number_times_taking_course;
+				int semester_taking_course; //only in case of finished courses
+				int year_taking_course; //only in case of finished courses
+
+				struct course_tutors
+				{
+					char lecturer_first_name[10];
+					char lecturer_middle_name[10];
+					char lecturer_last_name[10];
+
+					char GTA_first_name[10];
+					char GTA_middle_name[10];
+					char GTA_last_name[10];
+
+					char lab_GTA_first_name[10];
+					char lab_GTA_middle_name[10];
+					char lab_GTA_last_name[10];
+
+				};
+				struct course_tutors course_tutors1;
+
+				struct marks_acquired
+				{
+					float seventh;
+					float twelvth;
+					float year_work;
+					float final_exam;
+					float sum_of_all_above;
+				};
+				struct marks_acquired marks_acquired1;
+
+
+
+				int grade;
+				int percentage_absence;
+
+			};
+			struct finished_course_data finished_course_data1;
+
+		}; //7ot l foo2 da f array 3adadha 100 (finished courses)
+		struct finished finished1[100];
+
+
+		struct current
+		{
+
+
+			struct finished_course_data_current
+			{
+				int course_code_current;
+				char course_name_current [10];
+				int course_credit_hours_current;
+				int number_times_taking_course_current;
+
+
+				struct course_tutors_current
+				{
+					char lecturer_first_name_current[10];
+					char lecturer_middle_name_current[10];
+					char lecturer_last_name_current[10];
+
+					char GTA_first_name_current[10];
+					char GTA_middle_name_current[10];
+					char GTA_last_name_current[10];
+
+					char lab_GTA_first_name_current[10];
+					char lab_GTA_middle_name_current[10];
+					char lab_GTA_last_name_current[10];
+
+				};
+				struct course_tutors_current course_tutors_current1;
+
+
+				struct marks_acquired_current
+				{
+					float seventh_current;
+					float twelvth_current;
+					float year_work_current;
+					float final_exam_current;
+					float sum_of_all_above_current;
+				};
+				struct marks_acquired_current marks_acquired_current1;
+
+				int grade_current;
+				int percentage_absence_current;
+
+			};
+			struct finished_course_data_current finished_course_data_current1;
+		};
+		struct current current1[8];
+
+	};
+	struct courses courses1;
+};
+
+
+void readd (struct student std[5]) //we assume 5 student - to solve memory problem
+{
+
+	for (int i=students_scanned; i<students_scanned+1; i++)  //scans only 1 student
+	{
+
+		printf("please insert your first name: ");
+		scanf("%s",std[i].student_name1.first_name);
+
+		printf("please insert your middle name: ");
+		scanf("%s",std[i].student_name1.middle_name);
+
+		printf("please insert your last name: ");
+		scanf("%s",std[i].student_name1.last_name);
+		/*......................................................*/
+
+
+
+		printf("\n");
+		int new_student; //yes=1, No=0
+		printf("are you a new student? \n");
+		printf("if yes, press 1 \n");
+		printf("if no, press 0 \n");
+		scanf("%d",&new_student);
+		if(new_student == 1)
+		{
+			printf("will be adjusted later");
+		}
+		//regenerate an ID
+		else if (new_student == 0)
+		{
+			printf("please insert your registration number: ");
+			scanf("%d",&std[i].registration_number);
+		}
+
+
+
+		printf("\n");
+		printf("please enter your nationality: ");
+		scanf("%s",std[i].nationality);
+		/*......................................................*/
+
+		printf("\n");
+		printf("please enter your ID type: national ID, passport, ... : ");
+		scanf("%s",std[i].type_of_ID);
+		printf("please enter your ID number: ");
+		scanf("%d",&std[i].ID_number);
+		/*......................................................*/
+
+		printf("\n");
+		printf("Home address section: \n");
+		printf("flat number: ");
+		scanf("%d",&std[i].home_address1.flat_number);
+
+		printf("house number: ");
+		scanf("%d",&std[i].home_address1.house_number);
+
+		printf("street name: ");
+		scanf("%s",std[i].home_address1.street_name);
+
+		printf("area/district name: ");
+		scanf("%s",std[i].home_address1.area_district_name);
+
+		printf("city name: ");
+		scanf("%s",std[i].home_address1.city_name);
+
+
+		printf("governorate name: ");
+		scanf("%s",std[i].home_address1.governorate_name);
+
+		printf("country name ");
+		scanf("%s",std[i].home_address1.country);
+
+
+		printf("postal code: ");
+		scanf("%d",&std[i].home_address1.postal_code);
+		/*......................................................*/
+
+		printf("\n");
+		printf("mailing address section: \n");
+		int mailing_address_same;
+		printf("is your mailing address the same as your home address?\n");
+		printf("if yes, press 1: \n");
+		printf("if no, press 0: \n");
+		scanf("%d",&mailing_address_same);
+
+		if(mailing_address_same==0) //different address so we scan again
+		{
+			printf("flat number: ");
+			scanf("%d",&std[i].mailing_address1.flat_number_mailing);
+
+			printf("house number: ");
+			scanf("%d",&std[i].mailing_address1.house_number_mailing);
+
+			printf("street name: ");
+			scanf("%s",std[i].mailing_address1.street_name_mailing);
+
+			printf("area/district name: ");
+			scanf("%s",std[i].mailing_address1.area_district_name_mailing);
+
+			printf("city name: ");
+			scanf("%s",std[i].mailing_address1.city_name_mailing);
+
+
+			printf("governorate name: ");
+			scanf("%s",std[i].mailing_address1.governorate_name_mailing);
+
+			printf("country name ");
+			scanf("%s",std[i].mailing_address1.country_mailing);
+
+
+			printf("postal code: ");
+			scanf("%d",&std[i].mailing_address1.postal_code_mailing);
+		}
+
+		else if (mailing_address_same==1) //copy this into this
+		{
+			std[i].mailing_address1.flat_number_mailing = std[i].home_address1.flat_number;
+			std[i].mailing_address1.house_number_mailing = std[i].home_address1.house_number;
+			strcpy(std[i].mailing_address1.street_name_mailing,std[i].home_address1.street_name);
+			strcpy(std[i].mailing_address1.area_district_name_mailing, std[i].home_address1.area_district_name );
+			strcpy(std[i].mailing_address1.city_name_mailing, std[i].home_address1.city_name);
+			strcpy(std[i].mailing_address1.governorate_name_mailing, std[i].home_address1.governorate_name);
+			strcpy(std[i].mailing_address1.country_mailing, std[i].home_address1.country );
+			std[i].mailing_address1.postal_code_mailing = std[i].home_address1.postal_code;
+		}
+
+		/*......................................................*/
+		printf("\n");
+		printf("birth date section: \n");
+
+		printf("day: ");
+		scanf("%d",&std[i].age1.day);
+
+		printf("month: ");
+		scanf("%d",&std[i].age1.month);
+
+
+		printf("year: ");
+		scanf("%d",&std[i].age1.year);
+		/*......................................................*/
+
+		printf("\n");
+		printf("gender: ");
+		scanf("%s",std[i].student_gender);
+
+		printf("\n");
+		printf("first enrollment term and year: \n");
+		printf("please insert the first enrollment term: ");
+		scanf("%d",&std[i].enrollment1.first_enrollment_term);
+
+		printf("the first enrollment year: ");
+		scanf("%d",&std[i].enrollment1.first_enrollment_year);
+
+		printf("the department of enrollment: ");
+		scanf("%s",std[i].enrollment1.department_of_enrollment);
+		/*......................................................*/
+
+		printf("\n");
+		printf("tutor name: ");
+		scanf("%s",std[i].tutor_name);
+		printf("tutor code: ");
+		scanf("%d",&std[i].tutor_code);
+
+
+		//printf("\n");
+		// printf("current term: ");
+		//scanf("%s",std[i].current_term);
+
+
+		printf("\n");
+		printf("payments section: \n");
+		printf("type of funding: ");
+		scanf("%s",std[i].payments1.type_of_funding);
+		printf("number of payments done: ");
+		scanf("%d",&std[i].payments1.number_payments_done);
+		printf("total amount paid: ");
+		scanf("%d",&std[i].payments1.total_amount_paid);
+
+		//array of structure for details of each payment
+		printf("\n");
+		for(int j=0; j<std[i].payments1.number_payments_done; j++)
+		{
+			printf("transaction number #%d\n",j+1);
+			printf("\n");
+
+			printf("amount paid: ");
+			scanf("%d",&std[i].payments1.amount_paid);
+
+			printf("transaction number: ");
+			scanf("%d",&std[i].payments1.transaction_number);
+
+			printf("bank of transaction: ");
+			scanf("%s",std[i].payments1.bank_of_transaction);
+
+			printf("date of transaction: \n");
+
+			printf("day: ");
+			scanf("%d",&std[i].payments1.arr_details[j].date_of_transaction1.day_transaction);
+
+			printf("month: ");
+			scanf("%d",&std[i].payments1.arr_details[j].date_of_transaction1.month_transaction);
+
+			printf("year: ");
+			scanf("%d",&std[i].payments1.arr_details[j].date_of_transaction1.year_transaction);
+		}
+
+
+		printf("\n");
+		printf("contact info section: \n");
+		printf("email: ");
+		scanf("%s",std[i].contact1.email);
+		printf("home phone number: ");
+		scanf("%d",&std[i].home_phone_number);
+		printf("mobile number: ");
+		scanf("%lld",&std[i].mobile_number);
+
+
+		printf("\n");
+		printf("credit hours section: \n");
+
+		printf("maximum required for the degree: ");
+		scanf("%d",&std[i].credit_hours1.max_required_for_degree);
+
+		printf("finished: ");
+		scanf("%d",&std[i].credit_hours1.finished_ch);
+
+		printf("current: ");
+		scanf("%d",&std[i].credit_hours1.current_ch);
+
+		printf("remaining: ");
+		scanf("%d",&std[i].credit_hours1.remaining_ch);
+		/*......................................................*/
+
+		printf("\n");
+		printf("student GPA section: \n");
+
+		printf("overall GPA: will be calculated automatically"); //will be calculated after scanning each term
+		// scanf("%f",&std[i].GPA1.overall_gpa);
+
+
+		printf("number of semesters finished: ");
+		scanf("%d",&std[i].GPA1.number_of_semesters_finished);
+
+		for(int k=0; k<std[i].GPA1.number_of_semesters_finished; k++)
+		{
+			printf("term #%d\n",k+1);
+
+			printf("GPA: ");
+			scanf("%f",&std[i].GPA1.individual_semester_GPA[k]);
+		}
+
+		//        for(int p=0; p<std[i].GPA1.number_of_semesters_finished; p++) //editied: overall GPA ius
+		//        {
+		//                    std[i].GPA1.overall_gpa += std[i].GPA1.individual_semester_GPA[p];
+		//        }
+
+
+		/*...........reading question 17......................*/
+		printf("\n");
+		printf("Courses section: \n\n");
+
+		printf("finished courses: \n");
+		printf("number of finished courses: ");
+		scanf("%d",&std[i].courses1.number_courses_finished);
+
+
+		printf("total credit hours finished: ");
+		scanf("%d",&std[i].courses1.total_credit_hours_finished);
+
+
+
+
+
+		printf("finished courses data: \n \n");
+		for(int a= 0; a<std[i].courses1.number_courses_finished; a++) //take care how the counters are named
+		{
+			//scan details for each finished course
+			printf("Course #%d\n\n",a+1);
+
+			printf("course code: ");
+			scanf("%d",&std[i].courses1.finished1[a].finished_course_data1.course_code);
+
+			printf("course name: ");
+			scanf("%s",std[i].courses1.finished1[a].finished_course_data1.course_name);
+
+			printf("credit hours: ");
+			scanf("%d",&std[i].courses1.finished1[a].finished_course_data1.course_credit_hours);
+
+			printf("number of times taking the course: ");
+			scanf("%d",&std[i].courses1.finished1[a].finished_course_data1.number_times_taking_course);
+
+
+			printf("semester taking the course: ");
+			scanf("%d",&std[i].courses1.finished1[a].finished_course_data1.semester_taking_course);
+
+			printf("year taking the course: ");
+			scanf("%d",&std[i].courses1.finished1[a].finished_course_data1.year_taking_course);
+
+
+			printf("course tutors section: \n\n");
+
+			printf("lecturer first name: ");
+			scanf("%s",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.lecturer_first_name);
+
+			printf("lecturer middle name: ");
+			scanf("%s",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.lecturer_middle_name);
+
+			printf("lecturer last name: ");
+			scanf("%s",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.lecturer_last_name);
+			printf("\n");
+
+			printf("GTA first name: ");
+			scanf("%s",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.GTA_first_name);
+
+			printf("GTA middle name: ");
+			scanf("%s",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.GTA_middle_name);
+
+			printf("GTA last name: ");
+			scanf("%s",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.GTA_last_name);
+			printf("\n");
+
+
+			printf("lab GTA first name: ");
+			scanf("%s",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.lab_GTA_first_name);
+
+			printf("GTA middle name: ");
+			scanf("%s",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.lab_GTA_middle_name);
+
+			printf("GTA last name: ");
+			scanf("%s",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.lab_GTA_last_name);
+			printf("\n");
+
+
+
+			printf("marks section: \n\n");
+
+
+			printf("7th mark: ");
+			scanf("%f",&std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.seventh);
+
+			printf("12th mark: ");
+			scanf("%f",&std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.twelvth);
+
+			printf("year work: ");
+			scanf("%f",&std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.year_work);
+
+			printf("final exam: ");
+			scanf("%f",&std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.final_exam);
+
+
+
+			//these variables are just to calculate the sum
+			float seventh_for_sum = std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.seventh;
+			float twelvth_for_sum = std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.twelvth;
+			float year_work_for_sum = std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.year_work;
+			float final_exam_for_sum = std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.final_exam;
+
+
+
+			std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.sum_of_all_above = seventh_for_sum + twelvth_for_sum + year_work_for_sum + final_exam_for_sum;
+
+			//start from the grade
+
+			printf("percentage absence: ");
+			scanf("%d",&std[i].courses1.finished1[a].finished_course_data1.percentage_absence);
+
+		}
+
+
+
+
+
+		//put the current courses data here
+		//CURRENT COURSES
+		//CURRENT COURSES
+		//CURRENT COURSES
+
+
+		printf("current courses section: \n\n");
+		printf("number of current course: ");
+		scanf("%d",&std[i].courses1.number_courses_current);
+		printf("credit hours of current courses: ");
+		scanf("%d",&std[i].courses1.total_credit_hours_current);
+
+
+		printf("finished courses data: \n \n");
+		for(int b=0; b<std[i].courses1.number_courses_current; b++) //scanning each course details
+		{
+			printf("Course #%d\n\n",b+1);
+
+			printf("course code: ");
+			scanf("%d",&std[i].courses1.current1[b].finished_course_data_current1.course_code_current);
+
+
+			printf("course name: ");
+			scanf("%s",std[i].courses1.current1[b].finished_course_data_current1.course_name_current);
+
+
+			printf("credit hours: ");
+			scanf("%d",&std[i].courses1.current1[b].finished_course_data_current1.course_credit_hours_current);
+
+			printf("number of times taking the course: ");
+			scanf("%d",&std[i].courses1.current1[b].finished_course_data_current1.number_times_taking_course_current);
+
+
+			printf("course tutors section: \n\n");
+
+			printf("lecturer first name: ");
+			scanf("%s",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.lecturer_first_name_current);
+
+			printf("lecturer middle name: ");
+			scanf("%s",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.lecturer_middle_name_current);
+
+			printf("lecturer last name: ");
+			scanf("%s",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.lecturer_last_name_current);
+			printf("\n");
+
+			printf("GTA first name: ");
+			scanf("%s",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.GTA_first_name_current);
+
+			printf("GTA middle name: ");
+			scanf("%s",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.GTA_middle_name_current);
+
+			printf("GTA last name: ");
+			scanf("%s",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.GTA_last_name_current);
+			printf("\n");
+
+			printf("lab GTA first name: ");
+			scanf("%s",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.lab_GTA_first_name_current);
+
+			printf("lab GTA middle name: ");
+			scanf("%s",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.lab_GTA_middle_name_current);
+
+			printf("lab GTA last name: ");
+			scanf("%s",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.lab_GTA_last_name_current);
+			printf("\n");
+
+			printf("marks section: \n\n");
+
+
+			printf("7th mark: ");
+			scanf("%f",&std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.seventh_current);
+
+			printf("12th mark: ");
+			scanf("%f",&std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.twelvth_current);
+
+			printf("year work: ");
+			scanf("%f",&std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.year_work_current);
+
+			printf("final exam: ");
+			scanf("%f",&std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.final_exam_current);
+
+
+			//these variables are just to calculate the sum
+			float seventh_for_sum_current = std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.seventh_current;
+			float twelvth_for_sum_current = std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.twelvth_current;
+			float year_work_for_sum_current = std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.year_work_current;
+			float final_exam_for_sum_current = std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.final_exam_current;
+
+			std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.sum_of_all_above_current = seventh_for_sum_current + twelvth_for_sum_current + year_work_for_sum_current + final_exam_for_sum_current;
+
+
+			printf("percentage absence: ");
+			scanf("%d",&std[i].courses1.current1[b].finished_course_data_current1.percentage_absence_current);
+
+		}
+
+
+
+
+	}
+
+	students_scanned++;
+
+}
+
+
+void printt(struct student std[5]) //takes the array of struct and the number of student to print
+
+{
+	printf("enter the index of the student you wish to show the information for: ");
+	int index;
+	scanf("%d",&index);
+
+	printf("\n");
+	printf("the following is the data for the student \n\n");
+
+
+	//////////////////////////////
+	for (int i=index; i<index + 1; i++)  //prints only 1 student (according to index)
+	{
+
+		printf("first name: %s \n",std[i].student_name1.first_name);
+
+		printf("middle name: %s\n",std[i].student_name1.middle_name);
+
+		printf("last name: %s\n",std[i].student_name1.last_name);
+		/*......................................................*/
+
+		printf("\n");
+
+		printf("registration number: %d\n",std[i].registration_number);
+
+		printf("\n");
+		printf("nationality: %s\n",std[i].nationality);
+		/*......................................................*/
+
+		printf("\n");
+		printf("ID type: national ID, passport, ... : %s\n",std[i].type_of_ID);
+		printf("ID number: %d\n",std[i].ID_number);
+		/*......................................................*/
+
+		printf("\n");
+		printf("Home address section: \n");
+		printf("flat number: %d\n",std[i].home_address1.flat_number);
+
+		printf("house number: %d\n",std[i].home_address1.house_number);
+
+		printf("street name: %s\n",std[i].home_address1.street_name);
+
+		printf("area/district name: %s \n",std[i].home_address1.area_district_name);
+
+		printf("city name: %s\n",std[i].home_address1.city_name);
+
+
+		printf("governorate name: %s\n",std[i].home_address1.governorate_name);
+
+		printf("country name: %s\n",std[i].home_address1.country);
+
+
+		printf("postal code: %d\n",std[i].home_address1.postal_code);
+		/*......................................................*/
+
+		printf("\n");
+		printf("mailing address section: \n"); //home address section not printed (just to save time)
+
+		printf("flat number: %d\n",std[i].mailing_address1.flat_number_mailing);
+
+		printf("house number: %d\n", std[i].mailing_address1.house_number_mailing );
+
+		printf("street name: %s\n", std[i].mailing_address1.street_name_mailing );
+
+		printf("area/district name: %s\n", std[i].mailing_address1.area_district_name_mailing);
+
+		printf("city name: %s\n", std[i].mailing_address1.city_name_mailing );
+
+		printf("governorate name: %s\n", std[i].mailing_address1.governorate_name_mailing);
+
+		printf("country name %s\n", std[i].mailing_address1.country_mailing);
+
+
+		printf("postal code: %d\n", std[i].mailing_address1.postal_code_mailing);
+
+		/*......................................................*/
+		printf("\n");
+		printf("birth date section: \n");
+
+		printf("day: %d \n",std[i].age1.day);
+
+		printf("month: %d \n",std[i].age1.month);
+
+		printf("year: %d \n",std[i].age1.year);
+		/*......................................................*/
+
+		printf("\n");
+		printf("gender: %s \n",std[i].student_gender);
+
+		//STOPPED HERE
+
+		printf("\n");
+		printf("first enrollment term and year: \n");
+		printf("first enrollment term: %d\n", std[i].enrollment1.first_enrollment_term );
+
+		////
+
+		printf("the first enrollment year: %d\n", std[i].enrollment1.first_enrollment_year);
+
+		printf("department of enrollment: %s\n",std[i].enrollment1.department_of_enrollment);
+		/*......................................................*/
+
+		printf("\n");
+		printf("tutor name: %s\n",std[i].tutor_name);
+		printf("tutor code: %d\n",std[i].tutor_code);
+
+
+		//printf("\n");
+		// printf("current term: ");
+		//scanf("%s",std[i].current_term);
+
+
+		printf("\n");
+		printf("payments section: \n");
+		printf("type of funding: %s#n",std[i].payments1.type_of_funding);
+		printf("number of payments done: %d\n",std[i].payments1.number_payments_done);
+		printf("total amount paid: %d\n",std[i].payments1.total_amount_paid);
+
+		//array of structure for details of each payment
+		printf("\n");
+		for(int j=0; j<std[i].payments1.number_payments_done; j++)
+		{
+			printf("transaction number #%d\n",j+1);
+			printf("\n");
+
+			printf("amount paid: %d\n",std[i].payments1.amount_paid);
+
+			printf("transaction number: %d\n",std[i].payments1.transaction_number);
+
+			printf("bank of transaction: %s\n",std[i].payments1.bank_of_transaction);
+
+			printf("date of transaction: \n");
+
+			printf("day: %d\n",std[i].payments1.arr_details[j].date_of_transaction1.day_transaction);
+
+			printf("month: %d\n",std[i].payments1.arr_details[j].date_of_transaction1.month_transaction);
+
+			printf("year: %d\n",std[i].payments1.arr_details[j].date_of_transaction1.year_transaction);
+		}
+
+
+		printf("\n");
+		printf("contact info section: \n");
+		printf("email: %s\n", std[i].contact1.email);
+		printf("home phone number: %d\n",std[i].home_phone_number);
+		printf("mobile number: %lld\n",std[i].mobile_number);
+
+
+		printf("\n");
+		printf("credit hours section: \n");
+
+		printf("maximum required for the degree: %d",std[i].credit_hours1.max_required_for_degree);
+
+		printf("finished: %d\n", std[i].credit_hours1.finished_ch);
+
+		printf("current: %d\n",std[i].credit_hours1.current_ch);
+
+		printf("remaining: %d\n",std[i].credit_hours1.remaining_ch);
+		/*......................................................*/
+
+		printf("\n");
+		printf("student GPA section: \n");
+
+		printf("overall GPA: %f\n",std[i].GPA1.overall_gpa);
+
+		printf("number of semesters finished: %d\n",std[i].GPA1.number_of_semesters_finished);
+
+		for(int k=0; k<std[i].GPA1.number_of_semesters_finished; k++)
+		{
+			printf("term #%d\n",k+1);
+
+			printf("GPA: %f\n",std[i].GPA1.individual_semester_GPA[k]);
+		}
+
+		//put new line
+
+		/*...........reading question 17......................*/
+		printf("\n");
+		printf("Courses section: \n\n");
+
+		printf("finished courses: \n");
+		printf("number of finished courses: %d\n",std[i].courses1.number_courses_finished);
+
+
+		printf("total credit hours finished: %d\n",std[i].courses1.total_credit_hours_finished);
+
+
+
+
+
+		printf("finished courses data: \n \n");
+		for(int a= 0; a<std[i].courses1.number_courses_finished; a++) //take care how the counters are named
+		{
+			//scan details for each finished course
+			printf("Course #%d\n\n",a+1);
+
+			printf("course code: %d \n",std[i].courses1.finished1[a].finished_course_data1.course_code);
+
+			printf("course name: %s \n",std[i].courses1.finished1[a].finished_course_data1.course_name);
+
+			printf("credit hours: %d \n",std[i].courses1.finished1[a].finished_course_data1.course_credit_hours);
+
+			printf("number of times taking the course: %d \n",std[i].courses1.finished1[a].finished_course_data1.number_times_taking_course);
+
+
+			printf("semester taking the course: %d\n",std[i].courses1.finished1[a].finished_course_data1.semester_taking_course);
+
+			printf("year taking the course: %d\n",std[i].courses1.finished1[a].finished_course_data1.year_taking_course);
+
+
+			printf("course tutors section: \n\n");
+
+			printf("lecturer first name: %s\n",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.lecturer_first_name);
+
+			printf("lecturer middle name: %s\n",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.lecturer_middle_name);
+
+			printf("lecturer last name: %s\n",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.lecturer_last_name);
+			printf("\n");
+
+			printf("GTA first name: %s\n",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.GTA_first_name);
+
+			printf("GTA middle name: %s\n",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.GTA_middle_name);
+
+			printf("GTA last name: %s\n",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.GTA_last_name);
+			printf("\n");
+
+
+			printf("lab GTA first name: %s\n",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.lab_GTA_first_name);
+
+			printf("lab GTA middle name: %s\n",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.lab_GTA_middle_name);
+
+			printf("lab GTA last name: %s\n",std[i].courses1.finished1[a].finished_course_data1.course_tutors1.lab_GTA_last_name);
+
+
+
+			printf("marks section: \n\n");
+
+
+			printf("7th mark: %f\n",std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.seventh);
+
+			printf("12th mark: %f\n",std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.twelvth);
+
+			printf("year work: %f\n",std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.year_work);
+
+			printf("final exam: %f\n",std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.final_exam);
+
+
+
+			//these variables are just to calculate the sum
+			float seventh_for_sum = std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.seventh;
+			float twelvth_for_sum = std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.twelvth;
+			float year_work_for_sum = std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.year_work;
+			float final_exam_for_sum = std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.final_exam;
+
+
+
+			std[i].courses1.finished1[a].finished_course_data1.marks_acquired1.sum_of_all_above = seventh_for_sum + twelvth_for_sum + year_work_for_sum + final_exam_for_sum;
+
+			//stopped here
+			//start from the grade
+
+			printf("percentage absence: %d\n",std[i].courses1.finished1[a].finished_course_data1.percentage_absence);
+
+		}
+
+
+
+
+
+		//put the current courses data here
+		//CURRENT COURSES
+		//CURRENT COURSES
+		//CURRENT COURSES
+
+
+
+
+		printf("current courses section: \n\n");
+
+		printf("number of current course: %d",std[i].courses1.number_courses_current);
+		printf("credit hours of current courses: %d",std[i].courses1.total_credit_hours_current);
+
+
+		printf("finished courses data: \n \n");
+		for(int b=0; b<std[i].courses1.number_courses_current; b++) //scanning each course details
+		{
+			printf("Course #%d\n\n",b+1);
+
+			printf("course code: %d\n",std[i].courses1.current1[b].finished_course_data_current1.course_code_current);
+
+
+			printf("course name: %s\n",std[i].courses1.current1[b].finished_course_data_current1.course_name_current);
+
+
+			printf("credit hours: %d\n",std[i].courses1.current1[b].finished_course_data_current1.course_credit_hours_current);
+
+			printf("number of times taking the course: %d\n",std[i].courses1.current1[b].finished_course_data_current1.number_times_taking_course_current);
+
+
+			printf("course tutors section: \n\n");
+			printf("lecturer first name: %s\n",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.lecturer_first_name_current);
+			printf("lecturer middle name: %s\n",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.lecturer_middle_name_current);
+			printf("lecturer last name: %s\n",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.lecturer_last_name_current);
+			printf("\n");
+
+			printf("GTA first name: %s\n",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.GTA_first_name_current);
+			printf("GTA middle name: %s\n",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.GTA_middle_name_current);
+			printf("GTA last name: %s\n",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.GTA_last_name_current);
+			printf("\n");
+
+			printf("lab GTA first name: %s\n",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.lab_GTA_first_name_current);
+			printf("lab GTA middle name: %s\n",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.lab_GTA_middle_name_current);
+			printf("lab GTA last name: %s\n",std[i].courses1.current1[b].finished_course_data_current1.course_tutors_current1.lab_GTA_last_name_current);
+			printf("\n");
+
+			printf("marks section: \n\n");
+
+			//STOPPED HERE IN PRINTING
+
+			printf("7th mark: ");
+			scanf("%f",&std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.seventh_current);
+
+			printf("12th mark: ");
+			scanf("%f",&std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.twelvth_current);
+
+			printf("year work: ");
+			scanf("%f",&std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.year_work_current);
+
+			printf("final exam: ");
+			scanf("%f",&std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.final_exam_current);
+
+
+			//these variables are just to calculate the sum
+			float seventh_for_sum_current = std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.seventh_current;
+			float twelvth_for_sum_current = std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.twelvth_current;
+			float year_work_for_sum_current = std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.year_work_current;
+			float final_exam_for_sum_current = std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.final_exam_current;
+
+			std[i].courses1.current1[b].finished_course_data_current1.marks_acquired_current1.sum_of_all_above_current = seventh_for_sum_current + twelvth_for_sum_current + year_work_for_sum_current + final_exam_for_sum_current;
+
+
+			printf("percentage absence: ");
+			scanf("%d",&std[i].courses1.current1[b].finished_course_data_current1.percentage_absence_current);
+
+		}
+	}
+
+
+
+
+}
+
+//17) e)  calculate Age (tested and correct)
+void age (struct student std[5], int i) //i is the index of the student
+{
+	int present_date = 26;
+	int present_month = 5;
+	int present_year = 2021;
+
+	int index_age = i;
+
+	int birth_date = std[i].age1.day; //day of birth
+	int birth_month = std[i].age1.month;
+	int birth_year = std[i].age1.year;
+
+	int month[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+	if (birth_date > present_date)
+	{
+		present_date = present_date + month[birth_month - 1];
+		present_month = present_month - 1;
+	}
+	if (birth_month > present_month)
+	{
+		present_year = present_year - 1;
+		present_month = present_month + 12;
+	}
+	int final_date = present_date - birth_date;
+	int final_month = present_month - birth_month;
+	int final_year = present_year - birth_year;
+	printf("Present Age Years: %d Months: %d Days: %d", final_year, final_month, final_date);
+}
+
+
+//17) c)
+void return_age (struct student std[5])
+{
+	int index;
+	printf("index of student to return his age: ");
+	scanf("%d",&index);
+
+	age(std, index);
+}
+
+void return_reg (struct student std[5])
+{
+	int index;
+	printf("index of student to return his registration number : ");
+	scanf("%d",&index);
+
+	printf("%d",std[index].registration_number);
+
+}
+void return_nationality (struct student std[5])
+{
+	int index;
+	printf("index of student to return nationality;  ");
+	scanf("%d",&index);
+	printf("%s",std[index].nationality);
+
+}
+//17 c) done
+
+//17) d)
+void edit_age(struct student std[5])
+{
+	int index;
+
+	printf("enter the index of the student you want to edit his age: ");
+	scanf("%d",&index);
+
+	printf("day: ");
+	scanf("%d",&std[index].age1.day);
+
+	printf("month: ");
+	scanf("%d",&std[index].age1.month);
+
+
+	printf("year: ");
+	scanf("%d",&std[index].age1.year);
+}
+//17) d) done
+
+
+//17)f)
+
+
+
+//17)h)
+void new_payment(struct student std[5])
+{
+	int index;
+	printf("enter the index of the student to add a payment detail to: ");
+	scanf("%d",&index);
+
+	//std[index].payments1.number_payments_done;
+
+	for(int j=std[index].payments1.number_payments_done; j<std[index].payments1.number_payments_done+1; j++)
+	{
+		printf("transaction number #%d\n",j+1);
+		printf("\n");
+
+		printf("amount paid: ");
+		scanf("%d",&std[index].payments1.amount_paid);
+
+		printf("transaction number: ");
+		scanf("%d",&std[index].payments1.transaction_number);
+
+		printf("bank of transaction: ");
+		scanf("%s",std[index].payments1.bank_of_transaction);
+
+		printf("date of transaction: \n");
+
+		printf("day: ");
+		scanf("%d",&std[index].payments1.arr_details[j].date_of_transaction1.day_transaction);
+
+		printf("month: ");
+		scanf("%d",&std[index].payments1.arr_details[j].date_of_transaction1.month_transaction);
+
+		printf("year: ");
+		scanf("%d",&std[index].payments1.arr_details[j].date_of_transaction1.year_transaction);
+	}
+
+
+
+
+}
+//17) h) done
+
+//17) i)
+void edit_mobile_number(struct student std[5])
+{
+	int index;
+
+	printf("enter the index of the student you want to edit: ");
+	scanf("%d",&index);
+	printf("enter the new mobile number: ");
+	scanf("%lld",&std[index].mobile_number);
+
+
+}
+
+void edit_home_phone_numebr (struct student std[5])
+{
+	int index;
+
+	printf("enter the index of the student you want to edit: ");
+	scanf("%d",&index);
+	printf("enter the new phone number: ");
+	scanf("%lld",&std[index].home_phone_number);
+}
+//17) i) done
+
+//17)k)
+void family_discount (struct student std[5])
+{
+	printf("enter the family name to know whether the next child is eligible for discount or not: ");
+	char family_name_target [10];
+	scanf("%s",family_name_target);
+
+	for(int counter=0; counter<5; counter++)
+	{
+		if (strcmp(family_name_target,std[counter].last_name)==0)
+		{
+			printf("eligible for discount ");
+			break;
+
+		}
+	}
+
+
+
+
+
+}
+//17)k) done
+
+int main ()
+{
+	students_scanned = 0; //increases by 1 every time i use the scan function
+
+	struct student std[5]; //5aletha 5 students only to solve the memory issue
+
+
+	int end=0;
+	int selector;
+
+	while (end != 1)
+	{
+		printf("\t\t**welcome to the AAST student database**\n\n\n\n");
+		printf("There is no data in the database yet: \n\n");
+		printf("1- scan for new students: \n");
+		printf("2- print the data of a student (using the index): \n");
+		printf("3- to print a SPECIFIC data of a student (using the index): \n");
+		printf("4- to edit specific data: \n");
+		printf("5- new payment info\n");
+		printf("6- check whether student eligible for discount or not \n");
+		printf("type 0 to end the program");
+
+
+		printf("\n");
+		scanf("%d",&selector);
+
+		int selector_for_print;
+		int selector_for_edit;
+
+		switch(selector)
+		{
+		case 0:
+			end = 1;
+			break;
+
+		case 1:
+			readd(std); //scans only one student
+			break;
+		case 2:
+			printt(std);
+			break;
+
+
+		case 3:
+		{
+
+			printf("which data do you want to print? \n");
+			printf("\t 1- age: \n");
+			printf("\t 2- registration number\n");
+			printf("\t 3- nationality\n");
+
+			scanf("%d",&selector_for_print);
+
+			switch(selector_for_print)
+			{
+			case 1:
+				return_age(std);
+				break;
+			case 2:
+				return_reg(std);
+				break;
+			case 3:
+				return_nationality(std);
+				break;
+			}
+
+		}
+		break;
+
+
+		case 4:
+		{
+			printf("which data do you want to edit? \n");
+			printf("\t 1- mobile phone \n");
+			printf("\t 2- home phone number \n");
+
+			scanf("%d",&selector_for_edit);
+			switch (selector_for_edit)
+			{
+			case 1:
+				edit_mobile_number(std);
+				break;
+			case 2:
+				edit_home_phone_numebr(std);
+				break;
+			}
+		}
+		break;
+
+		case 5:
+			new_payment(std);
+
+
+		case 6:
+			family_discount(std);
+			break;
+		}
+
+
+
+		printf("\n");
+		printf("the previous task was succesfully done");
+		printf("\n\n\n\n\n\n\n\n");
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	return 0;
+}
