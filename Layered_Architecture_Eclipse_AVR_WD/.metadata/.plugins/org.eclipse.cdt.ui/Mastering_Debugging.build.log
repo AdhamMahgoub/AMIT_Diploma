@@ -1,11 +1,8 @@
-11:35:58 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+11:37:57 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-../main.c:7:49: warning: extra tokens at end of #include directive
-../main.c:7:51: warning: missing terminating " character
-../main.c:17:36: warning: extra tokens at end of #ifdef directive
 Finished building: ../main.c
  
 Building target: Mastering_Debugging.elf
@@ -37,5 +34,5 @@ Data:         34 bytes (1.7% Full)
 Finished building: sizedummy
  
 
-11:35:59 Build Finished (took 1s.101ms)
+11:37:58 Build Finished (took 1s.40ms)
 
