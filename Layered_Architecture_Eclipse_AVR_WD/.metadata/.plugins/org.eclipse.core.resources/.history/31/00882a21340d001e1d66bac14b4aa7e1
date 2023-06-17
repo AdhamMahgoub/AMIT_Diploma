@@ -7,13 +7,11 @@
 #include "MCAL/Communication/UART/UART_config.h"
 #include "MCAL/DIO/DIO_interface.h"
 
+
 #ifdef F_CPU
 #undef F_CPU
 #define F_CPU 8000000
 #endif
-
-
-
 
 
 

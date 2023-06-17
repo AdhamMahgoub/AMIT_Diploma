@@ -7,15 +7,21 @@
 #include "MCAL/Communication/UART/UART_config.h"
 #include "MCAL/DIO/DIO_interface.h"
 
+
 #ifdef F_CPU
 #undef F_CPU
 #define F_CPU 8000000
 #endif
 
+/*		UART using Interrupt 	*/
+#if (UART_Polling_Interrupt_Mode == Interrupt)
+#include <avr/interrupt.h>
+ISR(USART_RXC_vect)	// Receive Complete -- UART Receive ISR
+{
+	// UART Receive ISR
+}
 
-
-
-
+#endif
 
 int main(void)
 {

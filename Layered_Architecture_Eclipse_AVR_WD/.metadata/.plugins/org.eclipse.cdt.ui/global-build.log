@@ -761,3 +761,462 @@ Data:         34 bytes (1.7% Full)
 
 Finished building: sizedummy
  
+19:26:26 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:5:1: warning: "UDR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:12,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:75:1: warning: this is the location of the previous definition
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:6:1: warning: "UCSRA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:12,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:74:1: warning: this is the location of the previous definition
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:7:1: warning: "UCSRB" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:12,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:73:1: warning: this is the location of the previous definition
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:8:1: warning: "UCSRC" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:12,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:114:1: warning: this is the location of the previous definition
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:9:1: warning: "UBRRH" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:12,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:113:1: warning: this is the location of the previous definition
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:10:1: warning: "UBRRL" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:12,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:72:1: warning: this is the location of the previous definition
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:11:1: warning: "SREG" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:410,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:12,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/common.h:103:1: warning: this is the location of the previous definition
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:64: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+Finished building: ../MCAL/Communication/UART/UART_prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:8:
+../MCAL/DIO/DIO_interface.h:4:1: warning: "PORTA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:12,
+                 from ../main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:100:1: warning: this is the location of the previous definition
+In file included from ../main.c:8:
+../MCAL/DIO/DIO_interface.h:5:1: warning: "PORTB" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:12,
+                 from ../main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:95:1: warning: this is the location of the previous definition
+In file included from ../main.c:8:
+../MCAL/DIO/DIO_interface.h:6:1: warning: "PORTC" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:12,
+                 from ../main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:90:1: warning: this is the location of the previous definition
+In file included from ../main.c:8:
+../MCAL/DIO/DIO_interface.h:7:1: warning: "PORTD" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:12,
+                 from ../main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:85:1: warning: this is the location of the previous definition
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+./main.o: In function `__vector_13':
+C:\Users\adham\Desktop\AMIT_Diploma\Layered_Architecture_Eclipse_AVR_WD\Mastering_Debugging\Debug/../MCAL/Communication/UART/UART_interface.h:14: multiple definition of `__vector_13'
+./MCAL/Communication/UART/UART_prog.o:C:\Users\adham\Desktop\AMIT_Diploma\Layered_Architecture_Eclipse_AVR_WD\Mastering_Debugging\Debug/../MCAL/Communication/UART/UART_interface.h:14: first defined here
+make: *** [Mastering_Debugging.elf] Error 1
+19:26:44 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:64: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+Finished building: ../MCAL/Communication/UART/UART_prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10724 bytes (32.7% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:27:08 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:64: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+Finished building: ../MCAL/Communication/UART/UART_prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10692 bytes (32.6% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:29:11 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+In file included from ../MCAL/Communication/UART/UART_prog.c:4:
+../MCAL/Communication/UART/UART_interface.h:11:49: error: MCAL/Communication/UART/UART_config.h: No such file or directory
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:5:1: warning: "UDR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:13,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:75:1: warning: this is the location of the previous definition
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:6:1: warning: "UCSRA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:13,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:74:1: warning: this is the location of the previous definition
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:7:1: warning: "UCSRB" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:13,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:73:1: warning: this is the location of the previous definition
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:8:1: warning: "UCSRC" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:13,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:114:1: warning: this is the location of the previous definition
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:9:1: warning: "UBRRH" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:13,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:113:1: warning: this is the location of the previous definition
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:10:1: warning: "UBRRL" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:206,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:13,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom32.h:72:1: warning: this is the location of the previous definition
+In file included from ../MCAL/Communication/UART/UART_prog.c:5:
+../MCAL/Communication/UART/UART_private.h:11:1: warning: "SREG" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:410,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../MCAL/Communication/UART/UART_interface.h:13,
+                 from ../MCAL/Communication/UART/UART_prog.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/common.h:103:1: warning: this is the location of the previous definition
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:64: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+make: *** [MCAL/Communication/UART/UART_prog.o] Error 1
+19:29:24 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:64: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+Finished building: ../MCAL/Communication/UART/UART_prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10692 bytes (32.6% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:29:27 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10692 bytes (32.6% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:29:46 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:64: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+Finished building: ../MCAL/Communication/UART/UART_prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10692 bytes (32.6% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:32:05 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:64: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+Finished building: ../MCAL/Communication/UART/UART_prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10692 bytes (32.6% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:32:09 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10692 bytes (32.6% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:34:21 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+make all 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:64: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+Finished building: ../MCAL/Communication/UART/UART_prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Mastering_Debugging.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mastering_Debugging.map -mmcu=atmega32 -o "Mastering_Debugging.elf"  ./MCAL/Timer/Timer_prog.o  ./MCAL/EXTI/EXTI_program.o  ./MCAL/DIO/DIO_program.o  ./MCAL/Communication/UART/UART_prog.o  ./MCAL/Communication/SPI/SPI_prog.o  ./HAL/LCD/LCD_program.o  ./HAL/Keypad/keypad_program.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./main.o   
+Finished building target: Mastering_Debugging.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mastering_Debugging.elf  >"Mastering_Debugging.lss"
+Finished building: Mastering_Debugging.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Mastering_Debugging.elf  "Mastering_Debugging.hex"
+Finished building: Mastering_Debugging.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Mastering_Debugging.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10724 bytes (32.7% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

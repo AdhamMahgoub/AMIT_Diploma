@@ -1,5 +1,14 @@
-18:17:43 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
+19:34:21 **** Incremental Build of configuration Debug for project Mastering_Debugging ****
 make all 
+Building file: ../MCAL/Communication/UART/UART_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/Communication/UART/UART_prog.d" -MT"MCAL/Communication/UART/UART_prog.o" -c -o "MCAL/Communication/UART/UART_prog.o" "../MCAL/Communication/UART/UART_prog.c"
+../MCAL/Communication/UART/UART_prog.c: In function 'UART_send_float':
+../MCAL/Communication/UART/UART_prog.c:64: warning: implicit declaration of function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: incompatible implicit declaration of built-in function 'sprintf'
+../MCAL/Communication/UART/UART_prog.c:64: warning: format '%.3f' expects type 'double', but argument 3 has type 'float'
+Finished building: ../MCAL/Communication/UART/UART_prog.c
+ 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g3 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
@@ -24,7 +33,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:   10800 bytes (33.0% Full)
+Program:   10724 bytes (32.7% Full)
 (.text + .data + .bootloader)
 
 Data:         34 bytes (1.7% Full)
@@ -34,5 +43,5 @@ Data:         34 bytes (1.7% Full)
 Finished building: sizedummy
  
 
-18:17:45 Build Finished (took 1s.410ms)
+19:34:22 Build Finished (took 1s.237ms)
 

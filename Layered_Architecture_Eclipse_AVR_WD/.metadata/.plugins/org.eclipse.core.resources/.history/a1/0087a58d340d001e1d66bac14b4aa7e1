@@ -1,0 +1,21 @@
+#ifndef UART_interface_h
+#define UART_interface_h
+
+void UART_Init (void);
+void UART_SendByte (u8 Byte);
+u8 UART_RecieveByte (void);
+void UART_send_string(const char *arr);
+void UART_send_float(float x);
+
+
+#include "UART_config.h"
+#if (UART_Polling_Interrupt_Mode == Interrupt) /*		UART using Interrupt 	*/
+#include <avr/interrupt.h>
+ISR(USART_RXC_vect)	// Receive Complete -- UART Receive ISR
+{
+	// UART Receive ISR
+}
+#endif
+
+
+#endif

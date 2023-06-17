@@ -64,14 +64,3 @@ void UART_send_float(float x)			//A function to Transmit float
 	sprintf(arr, "%.3f", x);
 	UART_send_string(arr);
 }
-
-
-/*		UART using Interrupt 	*/
-#include "UART_config.h"
-#if (UART_Polling_Interrupt_Mode == Interrupt)
-#include <avr/interrupt.h>
-ISR(USART_RXC_vect)	// Receive Complete -- UART Receive ISR
-{
-	// UART Receive ISR
-}
-#endif
